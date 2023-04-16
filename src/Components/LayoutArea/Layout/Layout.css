@@ -12,9 +12,6 @@ grid-column: span 6;
 }
 
 
-/* .Layout main ,.Layout header{
-    height: 100%;
-} */
 .Layout main ,.Layout footer{
     margin-top: 10px;
     grid-column: span 6;
@@ -27,6 +24,4 @@ grid-column: span 6;
     grid-column: span 6;
     } 
 
-/* .Layout, .Layout>*{
-
-} */
+    

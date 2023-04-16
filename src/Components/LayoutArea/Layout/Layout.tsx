@@ -17,10 +17,7 @@ function Layout(): JSX.Element {
                 <AuthMenu/>
                 
             </header>
-            {/* <aside> */}
-            {/* <Menu/> */}
-
-            {/* </aside>  */}
+            
             <main>
                 <Routing/>
             </main>
