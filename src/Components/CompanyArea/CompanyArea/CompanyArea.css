@@ -1,0 +1,32 @@
+.CompanyArea {
+    /* height: 100%;
+    box-sizing: border-box;
+    display: grid; */
+
+    /* grid-template-columns: repeat(6,1fr); */
+    overflow: auto;
+    text-align: left;
+    border: 2px solid rgb(179, 25, 25);
+    border-radius: 25px;
+    width: 850px;
+    padding: 30px;
+    margin: auto;
+text-align: left;
+box-shadow: 8px 8px 8px;
+margin-top: 70px;
+font-family:  Garamond,Serif, "Courier New" ;
+
+}
+/* .CompanyArea ,.CompanyArea>*{
+	border: 1px solid rgb(153, 144, 144);
+    overflow: auto;
+} */
+/* 
+.CompanyArea aside{
+    grid-column: span 1; 
+} */
+/* 
+.CompanyArea main{
+    overflow: auto;
+    grid-column: span 5;
+} */

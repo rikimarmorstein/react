@@ -1,0 +1,29 @@
+.About div{
+	border: 2px solid rgb(179, 25, 25);
+    border-radius: 25px;
+    width: 900px;
+    padding: 20px;
+    margin:auto;
+text-align: left;
+box-shadow: 8px 8px 8px;
+color: rgb(114, 35, 35);
+/* font-family:  Garamond,Serif,  ; */
+font-size: 18px;
+font-family:Garamond, Verdana,sans-serif,Helvetica, Arial ;
+
+}
+.About b{
+margin-left: 20px;
+}
+
+.About h4{
+    font-family:Garamond, Verdana,sans-serif,Helvetica, Arial ;
+    text-align: right;
+}
+
+.About h3{
+
+    text-align: right;
+    font-family: Cambria, Georgia, Arial, Sans-serif;
+
+    }

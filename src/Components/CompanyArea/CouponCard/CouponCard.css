@@ -1,0 +1,29 @@
+.CouponCard {
+	position: relative;
+	display: inline-block;
+  border: 2px solid  black ;
+  padding: 10px;
+  margin: 10px;
+  /* border-radius: 10px; */
+  box-shadow: 5px 5px 10px;
+  /* font-weight: bold; */
+   font-family: Serif, Garamond, "Courier New" ;
+    text-align: left;
+}
+
+.CouponCard {
+   font-family: Serif, Garamond, "Courier New" ;
+  text-align: center;
+}
+.CouponCard a{
+    justify-content: end;
+    padding-block-end: 10px;
+}
+
+.CouponCard img{
+  width: 140px;
+  height: 100px;
+  /* border: 1.5px solid rgb(0, 0, 0); */
+
+}
+

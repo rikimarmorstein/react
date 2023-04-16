@@ -1,0 +1,19 @@
+.AddCoupon {
+    font-family: Garamond,Serif,  "Courier New" ;
+}
+    .AddCoupon form{
+border: 2px solid black;
+}
+.AddCoupon button{
+    font-family: Garamond,Serif,  "Courier New" ;
+border-radius: 5px;
+background-color: brown;
+color: white;
+margin-top: 10px;
+}
+
+.AddCoupon span{
+    color: red;
+    }
+
+

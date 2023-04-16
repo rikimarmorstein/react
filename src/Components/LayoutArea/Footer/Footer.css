@@ -1,0 +1,37 @@
+.Footer {
+	height: 100%;
+display: flex;	
+flex-direction: column;
+justify-content: center;
+}
+
+.Footer span{
+	color: black;
+}
+.git{
+	margin-right: 10px;
+	color: black;
+}
+.git:hover{
+	color: blue;
+}
+.whatsapp{
+	color: green;
+}
+.whatsapp:hover{
+	color: blue;
+}
+.email{
+text-align: center;
+margin-inline: auto;
+	color: rgb(148, 8, 8);
+	font-size: 18px;
+}
+.Footer a:hover{
+color: blue;
+}
+/* a{
+	float: right;
+	padding-right: 60px;
+} */
+

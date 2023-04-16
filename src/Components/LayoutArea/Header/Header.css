@@ -1,0 +1,48 @@
+.Header {
+	/* height: 100%; */
+/* display: flex;	 */
+/* flex-direction: column; */
+/* justify-content: center; */
+position: absolute;
+margin: auto;
+/* float: left; */
+width: 240px;
+
+
+}
+/* .Header ,.img {
+	width: 250px;
+    margin: auto;
+float: left;
+} */
+.Header h1{
+	margin-top: 10px;
+float: left;
+padding-left: 10px;
+font-family: "Courier New", Garamond,Serif ;
+/* text-shadow: 3px 3px 8px rgb(241, 132, 69); */
+font-size: 33px;
+/* box-shadow: 3px 3px 8px; */
+color: rgb(216, 24, 24);
+}
+.Header h2{
+	/* margin: auto; */
+position: inherit;
+padding-left: 70px;
+margin-top: 35px;
+color: white;
+font-family: cursive,Serif, Garamond, "Courier New";
+}
+.logo{
+	margin-top: 15px;
+	margin-left: 20px;
+	float: left;
+color: rgb(111, 199, 10);
+box-shadow: 3px 0px 0px rgb(255, 255, 255);
+padding-right: 15px;
+	font-size: 45px;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+.GetCompanyDetails {
+	width: 250px;
+    height: 150;
+    display: inline-flex;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin: 60px;
+    padding: 20px;
+    padding-left: 40px;
+    font-family: Garamond, Serif,  "Courier New" ;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px;
+}

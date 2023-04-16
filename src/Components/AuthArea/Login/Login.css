@@ -1,0 +1,13 @@
+.Login input, .Login select,.Login button{
+	/* border-radius: 5px; */
+    margin-bottom: 15px;
+}
+
+.Login button{
+    background-color: brown;
+    color: white;
+}
+
+.Login form{
+    border: 2px solid black;
+    }

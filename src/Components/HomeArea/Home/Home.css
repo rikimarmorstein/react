@@ -1,0 +1,79 @@
+.Home h1{
+text-align: left;
+font-size: 30px;
+font-family: "Courier New",Serif, Garamond  ;
+text-shadow: 5px 5px 10px;
+margin-top: auto;
+margin-left: 20px;
+float: left;
+    /* position: absolute; */
+    /* top: 1px;
+    margin-top: 10px;
+    padding-left: 1px; */
+    /* font-family: cursive,Serif, Garamond, "Courier New" ; */
+color: rgb(134, 10, 10);
+}
+.Home h2{
+	padding-top: 50px;
+	text-align: center;
+
+}
+.Home #top{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+.fluttering{
+    -webkit-animation: fluttering .90s linear infinite; 
+	-moz-animation: fluttering .20s linear infinite;
+	-ms-animation: fluttering .00s linear infinite;
+	-o-animation: fluttering .90s linear infinite;
+	 animation: fluttering .90s linear infinite;
+}
+@-webkit-keyframes fluttering {
+	0% { opacity: 1; }
+	20% { opacity: 1; }
+	50.01% { opacity: 0; }
+	50% { opacity: 0; }
+}
+@-moz-keyframes fluttering {
+	0% { opacity: 1; }
+	00% { opacity: 1; }
+	50.01% { opacity: 0; }
+	50% { opacity: 0; }
+}
+@-ms-keyframes fluttering {
+	0% { opacity: 1; }
+	0% { opacity: 1; }
+	50.01% { opacity: 0; }
+	50% { opacity: 0; }
+}
+@-o-keyframes fluttering {
+	0% { opacity: 1; }
+	0% { opacity: 1; }
+	50.01% { opacity: 0; }
+	50% { opacity: 0; }
+}
+@keyframes fluttering {
+	0% { opacity: 1; }
+	0% { opacity: 1; }
+	50.01% { opacity: 0; }
+	50% { opacity: 0; }
+}
+.Home form{
+	/* float: right; */
+	right: auto;
+	margin-right: 20px;
+	height: 21px;
+	width: 200px;
+	margin-top: auto;
+	font-size: 23px;
+	box-shadow: 5px 5px 10px;
+  }
+  
+  .Home input{
+	font-size: 13px;
+	width: 170px;
+	margin: 0;
+  float: right;
+  }

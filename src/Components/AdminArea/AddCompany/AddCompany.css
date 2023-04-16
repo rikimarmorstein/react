@@ -1,0 +1,21 @@
+.AddCompany button{
+	border: 1px solid black;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    margin-top: 10px;
+}
+.AddCompany select, .AddCompany input{
+    border-radius: 5px;
+}
+
+.AddCompany span{
+    position: absolute;
+    margin-left:20px ;
+    color: red;
+    }
+
+    
+.AddCompany form{
+    border: 2px solid black;
+    }
