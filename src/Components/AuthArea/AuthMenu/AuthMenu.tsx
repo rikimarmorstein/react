@@ -6,6 +6,7 @@ import { logoutAction as logoutCompany } from "../../../Redux/CompanyState";
 import { logoutAction as logoutCoupon} from "../../../Redux/CouponState";
 import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import authService from "../../../Services/AuthService";
+import {FaUserCircle} from "react-icons/fa";
 import "./AuthMenu.css";
 
 function AuthMenu(): JSX.Element {
@@ -38,8 +39,8 @@ function AuthMenu(): JSX.Element {
         <div className="AuthMenu">
             {!user &&
                 <>
-                    <span>Hello Guest | </span>
-                    <NavLink to="/login">Login</NavLink>
+                    <span> 
+                    <NavLink to="/login" title="Login"><FaUserCircle/></NavLink></span>
                 </>
             }
             {user &&

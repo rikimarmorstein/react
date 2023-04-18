@@ -48,7 +48,7 @@ function AddCompany(): JSX.Element {
                 <input type="email" {...register("email",
                  {
                     required:{value:true, message:"Missing email"} ,
-                    validate: (value) => isValidateEmail(value)|| "Invalid email address",
+                    validate: (value) => isValidateEmail(value)|| "Email must include @ and .",
                 minLength:{value:2, message:"email too short"}
                 
                                 })} />

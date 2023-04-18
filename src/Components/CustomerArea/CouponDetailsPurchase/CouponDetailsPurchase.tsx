@@ -43,15 +43,19 @@ function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
 {/* <img className="coupon-image" src="" ><ImGift/></img> */}
 {/* <ImGift className="coupon-image" /> */}
             <div>
+            <div className="container">
 
-                <img src={props.coupon.image} alt=""/><br/>
+                <img src={props.coupon.image} alt="Avatar" className="image"/><br/>
                 {/* <hr /> */}
-                <br />
-                 {props.coupon.category}
+                <div className="middle">
+    <div className="text"><NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart className="buy"/></NavLink></div>
+                </div>                </div>
 
                 
-             <h3>  {props.coupon.title} </h3> 
-                 {props.coupon.description}<br />
+                 {props.coupon.category}<br />
+
+                <hr/>
+          <span>     {props.coupon.title} </span>- { props.coupon.description}<br />
                 Valid until: {formatDate(props.coupon.endDate)}<br />
                 In stock: {props.coupon.amount}<br />
                 <h3>  {props.coupon.price} NIS</h3>
@@ -62,9 +66,7 @@ function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
 
 {/* <br/> */}
 
-                <NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart/></NavLink>
-
-                <br />
+                {/* <NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart/></NavLink> */}
 
             {/* </div> */}
         </div>

@@ -3,9 +3,10 @@ text-align: left;
 font-size: 30px;
 font-family: "Courier New",Serif, Garamond  ;
 text-shadow: 5px 5px 10px;
-margin-top: auto;
+margin-top: 0;
 margin-left: 20px;
 float: left;
+margin-top:15px;
     /* position: absolute; */
     /* top: 1px;
     margin-top: 10px;
@@ -23,6 +24,28 @@ color: rgb(134, 10, 10);
     bottom: 0;
     margin-bottom: 20px;
 }
+
+.Home button{
+	margin-top: 0;
+	/* padding-top: 0; */
+	/* float: inline-start; */
+	width: 100px;
+	margin-bottom: 50px;
+	background-color: rgb(182, 130, 18);
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 15px;
+
+}
+/* .Home #button{
+	margin-top: 0px;
+	padding-top: 0px;
+	float: inline-end;
+	margin-right: 280px;
+} */
+
+
 .fluttering{
     -webkit-animation: fluttering .90s linear infinite; 
 	-moz-animation: fluttering .20s linear infinite;
@@ -61,14 +84,15 @@ color: rgb(134, 10, 10);
 	50% { opacity: 0; }
 }
 .Home form{
-	/* float: right; */
+	float: right;
 	right: auto;
 	margin-right: 20px;
 	height: 21px;
 	width: 200px;
-	margin-top: auto;
 	font-size: 23px;
 	box-shadow: 5px 5px 10px;
+	margin-top:5px;
+
   }
   
   .Home input{

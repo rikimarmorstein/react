@@ -2,7 +2,7 @@
   position: relative;
 	display: inline-block;
   border: 2px dashed  black ;
-  padding: 10px;
+  padding: 7px;
   margin: 10px;
   box-shadow: 5px 5px 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,19 +10,69 @@
    }
    
 img{
-  width: 140px;
+  width: auto;
   height:120px;
 margin-right: auto;
-border-radius: 5px;
+/* border-radius: 5px; */
 
 }
+.container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  width: 150px;
+  height:130px;
+  -webkit-filter: contrast(130%);
+  filter: contrast(130%);
+  opacity: 1;
+  display: block;
+  /* width: 100%;
+  height: auto; */
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+
+  
+}
+
+.container:hover .image {
+  opacity: 0.4;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  /* background-color: white; */
+  border:4px solid white;
+  color: rgb(19, 2, 2);
+  font-size: 20px;
+  padding: 16px 32px;
+  text-align: center;
+  
+}
 .coupon-image {
   position: absolute;
   top: -15px;
   width: 50px;
   font-size: 25px;
   color: black;
+}
+.buy{
+  font-size: 30px;
 }
 
 .CouponDetailsPurchase div{
@@ -32,6 +82,10 @@ border-radius: 5px;
 }
 .CouponDetailsPurchase a{
 font-size: 20px;
-  justify-content: end;
-padding-block-end: 10px;
+  /* justify-content: end; */
+/* padding-block-end: 10px; */
+}
+
+.CouponDetailsPurchase span{
+    font-weight: bold;
 }

@@ -8,10 +8,14 @@ import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import store from "../../../Redux/Store";
 import authService from "../../../Services/AuthService";
 import notificationService from "../../../Services/NotificationService";
-import "./Login.css";
-import { FormControl, IconButton, Input, InputAdornment, InputLabel, makeStyles } from "@mui/material";
+import { Avatar, FormControl, FormControlLabel, FormLabel, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, Radio, RadioGroup, TextField, makeStyles } from "@mui/material";
+import {MdAttachEmail} from "react-icons/md";
+import {AiFillEye, AiFillEyeInvisible} from "react-icons/ai";
 
-import React from "react";
+
+import "./Login.css";
+
+import React, { useState } from "react";
 
 function Login(): JSX.Element {
     const { register, handleSubmit } = useForm<CredentialsModel>();
@@ -78,26 +82,110 @@ function Login(): JSX.Element {
     //   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
     //     event.preventDefault();
     //   };
-    
+
+
+    const [value, setValue] = React.useState('');
+
+  const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue((event.target as HTMLInputElement).value);
+};
+
+    // const {register,handleSubmit}=useForm<CredentialsModel>();
+    // const navigate=useNavigate();
+    const [values, setValues] = useState({
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+      });
+
+  
+  const handleChange = (prop: any) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
+
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
     return (
         <div className="Login">
 
 			<form onSubmit={handleSubmit(send)}>
                 
-                <label>Client Type: </label>
+                {/* <label>Client Type: </label>
                 <select defaultValue="" required {...register("clientType")}>
                     <option disabled value="">Select Client Type...</option>
                     <option value={ClientType.ADMINISTRATOR}>Admin</option>
                     <option value={ClientType.COMPANY}>Company</option>
                     <option value={ClientType.CUSTOMER}>Customer</option>
                     
-                </select>
+                </select> */} 
+<FormControl component="fieldset">
+      <FormLabel component="legend">Client Type:</FormLabel>
+      <RadioGroup row  value={value} onChange={handleChangeEmail} >
+        <FormControlLabel required {...register("clientType")}  value={ClientType.ADMINISTRATOR} control={<Radio />} label="ADMIN" />
+           <FormControlLabel required {...register("clientType")} value={ClientType.COMPANY} control={<Radio />} label="COMPANY" /> 
+        <FormControlLabel required {...register("clientType")} value={ClientType.CUSTOMER} control={<Radio />} label="CUSTOMER" /> 
+        {/* <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" /> */}
+      </RadioGroup>
+    </FormControl>
+                {/* <label>Email: </label>
+                <input type="email" required {...register("email")} /> */}
+                                 <FormControl id="email" defaultValue="Small" size="small">  
+                <TextField id="email" label="Email" size="small"  variant="outlined" type="email" {...register("email")} InputProps={{
+                endAdornment: <InputAdornment position="end"><MdAttachEmail/></InputAdornment>,
+              }}
+        //          InputProps={{
+        //   startAdornment: (
+        //     <InputAdornment position="end">
+        //       <BsFillSuitHeartFill />
+        //     </InputAdornment>
+        //   ),
+        // }}
+        /> 
 
-                <label>Email: </label>
-                <input type="email" required {...register("email")} />
+         </FormControl>
+{/* <FormControl id="password"  size="small">  
+          <InputLabel    variant="filled">Email</InputLabel>
+                <OutlinedInput
+             required {...register ("email")}
 
-                <label>Password: </label>
-                 <input type="password" required {...register("password")} />
+             endAdornment={<InputAdornment position="end"><MdAttachEmail/>
+              
+              </InputAdornment>
+            }
+          />
+           </FormControl> */}
+
+                {/* <label>Password: </label>
+                 <input type="password" required {...register("password")} /> */}
+            
+              
+                 <FormControl id="password" defaultValue="Small" size="small">  
+          <InputLabel  htmlFor="outlined-adornment-password"  variant="filled">Password</InputLabel>
+                <OutlinedInput
+            id="outlined-adornment-password"   required {...register ("password")}
+            type={values.showPassword ? 'text' : 'password'}
+            value={values.password}
+            onChange={handleChange('password')}
+            endAdornment={
+              <InputAdornment position="end" >
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? <AiFillEye className="eye"/> : <AiFillEyeInvisible className="eye"/>}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+           </FormControl>
                 {/* <FormControl > */}
 
                 {/* <InputLabel htmlFor="standard-adornment-password" required {...register("password")}>Password</InputLabel>
@@ -122,9 +210,10 @@ function Login(): JSX.Element {
         {/* </FormControl> */}
 
 
-                <button>Login</button>
+                <button id="button">Login</button>
 
             </form>
+            
         </div>
     );
 }
