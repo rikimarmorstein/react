@@ -37,12 +37,12 @@ a {
 #backToHome{
   position: absolute;
   right: 3%;
-  top: 15%;
+  top: 25%;
   text-decoration: none; 
   transform: scale(1.1); 
   background-color: rgb(255, 255, 255);
-  color: brown;
-  border: 1.5px solid brown;
+  color: rgb(8, 1, 1);
+  border: 1.5px solid rgb(15, 13, 13);
   border-radius: 5px;
   width: 30px;
   box-shadow: 3px 3px 10px;

@@ -1,19 +1,22 @@
-/* .Login input, .Login select,.Login button{
+.Login input, .Login select,.Login button{
 	margin-top: 20px;
 padding: 10px;
+width: 100%;
 
-} */
- /* .Login button{
+}
+ .Login button{
 	margin-top: 20px;
 padding: 10px;
+width: 100%;
 
-} */
+}
 .Login #button{
     background-color: rgb(197, 153, 31);
     color: white;
     /* padding-top: 20px; */
     margin-top: 20px;
-    padding: 10px;
+    padding: 10px;    width: 100%;
+    
 }
 .Login #button:hover{
     
@@ -21,17 +24,33 @@ padding: 10px;
 }
 .Login form{
     border: 2px solid black;
-    width: 370px;
+    width: 270px;
+    box-sizing: border-box;
+
     /* background-image: linear-gradient(45deg, rgb(24, 22, 9), rgb(243, 209, 97)); */
 }
 .Login .eye{
-font-size: 40px;
-color: rgb(0, 4, 7);
+font-size: 35px;
+/* color: rgb(0, 4, 7); */
+margin-top: -17px;
+color: rgb(83, 79, 79);
 }
 .Login #password ,.Login #email{
-padding-top: 20px;
+/* padding-top: 20px; */
     width: 100%;
 
+}
+.Login #email{
+    width: 100%;
+}
+
+.Login .emailIcon{
+    margin-right: 10px;
+}
+.Login .userIcon{
+    margin-right: 25px;
+    color: rgb(83, 79, 79);
+float: right;
 }
 
 

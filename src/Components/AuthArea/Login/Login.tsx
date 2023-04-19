@@ -8,18 +8,23 @@ import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import store from "../../../Redux/Store";
 import authService from "../../../Services/AuthService";
 import notificationService from "../../../Services/NotificationService";
-import { Avatar, FormControl, FormControlLabel, FormLabel, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, Radio, RadioGroup, TextField, makeStyles } from "@mui/material";
+import { Avatar, Button, FormControl, FormControlLabel, FormLabel, IconButton, Input, InputAdornment, InputLabel, MenuItem, OutlinedInput, Radio, RadioGroup, Select, TextField, colors, makeStyles } from "@mui/material";
 import {MdAttachEmail} from "react-icons/md";
-import {AiFillEye, AiFillEyeInvisible} from "react-icons/ai";
+import {BsEye, BsEyeSlash} from "react-icons/bs";
+import {FaUserAlt} from "react-icons/fa";
 
 
-import "./Login.css";
 
 import React, { useState } from "react";
+import "./Login.css";
+
 
 function Login(): JSX.Element {
     const { register, handleSubmit } = useForm<CredentialsModel>();
+
     const navigate = useNavigate();
+
+
 
         function send(credentials: CredentialsModel) {
         authService.login(credentials).then(()=>{
@@ -86,7 +91,7 @@ function Login(): JSX.Element {
 
     const [value, setValue] = React.useState('');
 
-  const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeUser = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
 };
 
@@ -111,11 +116,18 @@ function Login(): JSX.Element {
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
+
+  
+  function isValidateEmail(email : string) : boolean{
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email)
+}
     return (
         <div className="Login">
 
-			<form onSubmit={handleSubmit(send)}>
-                
+			{/* <form onSubmit={handleSubmit(send)}> */}
+      <form onSubmit={handleSubmit(send)} >
+ 
                 {/* <label>Client Type: </label>
                 <select defaultValue="" required {...register("clientType")}>
                     <option disabled value="">Select Client Type...</option>
@@ -124,48 +136,54 @@ function Login(): JSX.Element {
                     <option value={ClientType.CUSTOMER}>Customer</option>
                     
                 </select> */} 
-<FormControl component="fieldset">
+
+ <label>Client Type: </label>  <FaUserAlt className="userIcon"/>            <br />
+ <table >
+                {/* <select defaultValue="" required {...register("clientType")}>
+                    <option disabled value="">Client Type</option>
+                    <option value={ClientType.ADMINISTRATOR}>Admin</option>
+                    <option value={ClientType.COMPANY}>Company</option>
+                </select>  */}
+                {/* <RadioGroup row> */}
+                
+                <tr>
+        <td >        <input  type="radio" id="ADMINISTRATOR" name="ADMINISTRATOR" value={ClientType.ADMINISTRATOR} aria-label="ADMIN" required {...register("clientType")}/><span>Admin</span>              </td>
+
+        <td >       <input type="radio" id="Company" name="Company" value={ClientType.COMPANY} aria-label="Company" required {...register("clientType")}/><span>Company</span>              </td>
+
+
+        <td >     <input type="radio" id="Customer" name="Customer" value={ClientType.CUSTOMER} aria-label="Customer" required {...register("clientType")}/><span>Customer</span>              </td></tr></table >
+
+              <br />
+              <br />
+{/* </RadioGroup> */}
+
+{/* <FormControl component="fieldset">
       <FormLabel component="legend">Client Type:</FormLabel>
-      <RadioGroup row  value={value} onChange={handleChangeEmail} >
+      <RadioGroup   value={value} onChange={handleChangeUser} defaultValue="" >
         <FormControlLabel required {...register("clientType")}  value={ClientType.ADMINISTRATOR} control={<Radio />} label="ADMIN" />
            <FormControlLabel required {...register("clientType")} value={ClientType.COMPANY} control={<Radio />} label="COMPANY" /> 
         <FormControlLabel required {...register("clientType")} value={ClientType.CUSTOMER} control={<Radio />} label="CUSTOMER" /> 
-        {/* <FormControlLabel value="disabled" disabled control={<Radio />} label="(Disabled option)" /> */}
       </RadioGroup>
-    </FormControl>
+    </FormControl> */}
                 {/* <label>Email: </label>
                 <input type="email" required {...register("email")} /> */}
-                                 <FormControl id="email" defaultValue="Small" size="small">  
+                                  {/* <FormControl id="email" defaultValue="Small" size="small">  
                 <TextField id="email" label="Email" size="small"  variant="outlined" type="email" {...register("email")} InputProps={{
                 endAdornment: <InputAdornment position="end"><MdAttachEmail/></InputAdornment>,
               }}
-        //          InputProps={{
-        //   startAdornment: (
-        //     <InputAdornment position="end">
-        //       <BsFillSuitHeartFill />
-        //     </InputAdornment>
-        //   ),
-        // }}
+       
+              
         /> 
 
-         </FormControl>
-{/* <FormControl id="password"  size="small">  
-          <InputLabel    variant="filled">Email</InputLabel>
-                <OutlinedInput
-             required {...register ("email")}
+         </FormControl> */}
+        
 
-             endAdornment={<InputAdornment position="end"><MdAttachEmail/>
-              
-              </InputAdornment>
-            }
-          />
-           </FormControl> */}
 
-                {/* <label>Password: </label>
-                 <input type="password" required {...register("password")} /> */}
-            
-              
-                 <FormControl id="password" defaultValue="Small" size="small">  
+
+
+
+                 {/* <FormControl id="password" defaultValue="Small" size="small">  
           <InputLabel  htmlFor="outlined-adornment-password"  variant="filled">Password</InputLabel>
                 <OutlinedInput
             id="outlined-adornment-password"   required {...register ("password")}
@@ -185,34 +203,68 @@ function Login(): JSX.Element {
               </InputAdornment>
             }
           />
-           </FormControl>
-                {/* <FormControl > */}
-
-                {/* <InputLabel htmlFor="standard-adornment-password" required {...register("password")}>Password</InputLabel>
-          <Input
-            id="standard-adornment-password"
+           </FormControl> */}
+                
+                <TextField id="email" label="email" variant="outlined" required {...register ("email",
+                    {
+                      required: { value: true, message: "Missing email" },
+                      validate: (value) => isValidateEmail(value)|| "Invalid email address",
+                      minLength:{value:2, message:"Email too short"}   
+                  }
+                )}
+              InputProps={{
+                endAdornment: <InputAdornment position="end"><MdAttachEmail className="emailIcon"/></InputAdornment>,
+              }}
+       />
+                <br />
+                <br />
+                <FormControl id="password" variant="outlined">  
+          <InputLabel htmlFor="outlined-adornment-password" variant="outlined" >Password</InputLabel>
+                <OutlinedInput
+            id="outlined-adornment-password"
+            required {...register ("password")} 
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}
             endAdornment={
-              <InputAdornment position="end">
+              <InputAdornment position="end" >
                 <IconButton
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
+                  edge="end"
                 >
-                  {/* {values.showPassword ? <Visibility /> : <VisibilityOff />} */}
-                {/* </IconButton>
+                  {values.showPassword ? <BsEye className="eye"/> : <BsEyeSlash className="eye"/>}
+                </IconButton>
               </InputAdornment>
-             }
-          {/* /> */}
-        {/* </FormControl> */}
-        {/* </FormControl> */}
-
-
-                <button id="button">Login</button>
-
+            }
+          />
+           </FormControl>
+                <br />
+                
+                {/* <FormControl variant="outlined" style={{'width': '100%'}} >
+        <InputLabel id="demo-simple-select-outlined-label">Client Type:</InputLabel>
+        <Select
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined"
+          label="Client Type"
+          required {...register ("clientType")}
+        >
+          <MenuItem value="">
+          </MenuItem>
+          <MenuItem value={ClientType.CUSTOMER}>Customer</MenuItem>
+          <MenuItem value={ClientType.COMPANY}>Company</MenuItem>
+        </Select>
+      </FormControl>
+      <br /> */}
+                <br />
+                <Button variant="outlined" color="primary" type="submit">
+                    Login
+                </Button>
             </form>
+                {/* <button id="button">Login</button> */}
+
+            {/* </form> */}
             
         </div>
     );

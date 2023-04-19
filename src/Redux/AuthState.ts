@@ -71,5 +71,4 @@ function extractUser(token: string): UserModel {
     return user;
 }
 
-// 5. Store - The manager which can do dispatch, getState and subscribe
-// export const authStore = createStore(authReducer);
+

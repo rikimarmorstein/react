@@ -14,8 +14,8 @@ import {FaGifts} from "react-icons/fa";
 function AllCouponList(): JSX.Element {
     let couponId :number;
 
-    const [coupons, setCoupons] = useState<Coupon[]>(store.getState().couponsState.coupons);
     // const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
+    const [coupons, setCoupons] = useState<Coupon[]>(store.getState().couponsState.coupons);
     const [selectedPrice, setSelectedPrice] = useState<number>(0);
     const [selectedName, setSelectedName] = useState<string>("");
     const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
@@ -80,11 +80,7 @@ function AllCouponList(): JSX.Element {
                             return coupon.price <= currentPrice;
                     })
                 }
-                //  if (selectedCategory != "ALL") {
-                //      fillteredCoupons = fillteredCoupons.filter((coupon)=>{
-                //             return coupon.category === selectedCategory;
-                //      })
-                //  }
+                
                 setCoupons(fillteredCoupons);
              }
 

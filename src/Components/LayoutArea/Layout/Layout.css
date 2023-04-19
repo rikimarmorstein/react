@@ -4,7 +4,10 @@
     display: grid;
     grid-template-rows: 20% 75% 5%;
     grid-template-columns: repeat(6,1fr);
-   
+   /* width: 100%; */
+   overflow: auto ;
+width: auto;
+
 }
 
 .Layout header{
