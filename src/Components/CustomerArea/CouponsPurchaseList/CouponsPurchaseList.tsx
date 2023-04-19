@@ -70,10 +70,11 @@ function CouponsPurchaseList(): JSX.Element {
         setCoupons(fillteredCoupons);
     }
     
+    
 
     return (
         <div className="CouponsPurchaseList" id="up-list-purchase">
-            
+
 <label>Sort by category: </label>
 <select value={selectedCategory} onChange={handleCategoryChange} name="category" id="category">
                     <option value="ALL">ALL</option>

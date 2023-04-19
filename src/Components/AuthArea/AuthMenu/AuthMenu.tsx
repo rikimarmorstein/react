@@ -6,7 +6,9 @@ import { logoutAction as logoutCompany } from "../../../Redux/CompanyState";
 import { logoutAction as logoutCoupon} from "../../../Redux/CouponState";
 import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import authService from "../../../Services/AuthService";
-import {FaUserCircle} from "react-icons/fa";
+import {FaUserCircle, FaUserAlt} from "react-icons/fa";
+// import {TbShoppingBag} from "react-icons/tb";
+
 import "./AuthMenu.css";
 
 function AuthMenu(): JSX.Element {
@@ -35,20 +37,44 @@ function AuthMenu(): JSX.Element {
         
     }
 
+    
+    // const [count, setCount]= useState<number>(0);
+
+    // useEffect(()=>{
+    //     setCount(store.getState().couponsState.myCoupons.length);
+    //     const unsubscribe = store.subscribe(()=>{
+    //     setCount(store.getState().couponsState.myCoupons.length);
+    //         });
+    //         return ()=>{
+    //             unsubscribe(); 
+    //         };
+    // },[]);
+
+    // if(count===0)return null;
+
+
     return (
         <div className="AuthMenu">
             {!user &&
                 <>
-                    <span> 
-                    <NavLink to="/login" title="Login"><FaUserCircle/></NavLink></span>
+                    <span id="login"> 
+                    <NavLink to="/login" title="Login"> <FaUserCircle/></NavLink></span>
                 </>
             }
             {user &&
                 <>
-                    <span>Hello {user.name} | </span>
-                    <NavLink to="" onClick={logout}>Logout</NavLink>
-                </>
-            }
+                    <span >{user.clientType==="CUSTOMER" && <NavLink id="details" to="/customerDetails"><FaUserAlt title="Customer details" /></NavLink> }  Hello {user.name} | </span>
+                    <NavLink to="" onClick={logout} id="logout">Logout</NavLink>
+                </>   }
+                
+                {/* <br/> */}
+{/* {user.clientType==="CUSTOMER" && 
+<>
+<NavLink to="/customer-coupons"><TbShoppingBag id="bag"/><span id="count">{count} </span></NavLink>
+</>} */}
+{/* <span id="bag"><TbShoppingBag/></span><span id="count"> {count}</span> */}
+
+         
         </div>
     );
 }

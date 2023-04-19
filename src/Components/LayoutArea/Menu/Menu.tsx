@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import ClientType from "../../../Models/ClientType";
 import store from "../../../Redux/Store";
 import {FaHome} from "react-icons/fa";
+import {TbShoppingBag} from "react-icons/tb";
+
 import "./Menu.css";
 
 function Menu(): JSX.Element {
@@ -20,6 +22,21 @@ function Menu(): JSX.Element {
 
     }, []);
 
+
+
+    const [count, setCount]= useState<number>(0);
+
+    useEffect(()=>{
+        setCount(store.getState().couponsState.myCoupons?.length);
+        const unsubscribe = store.subscribe(()=>{
+        setCount(store.getState().couponsState.myCoupons?.length);
+            });
+            return ()=>{
+                unsubscribe(); 
+            };
+    },[]);
+
+
     return (
         <div className="Menu">
 <div>
@@ -35,6 +52,9 @@ function Menu(): JSX.Element {
 
 
             {clientType === ClientType.CUSTOMER && <>
+                                     <span id="spanBag">
+                                     <NavLink id="myCoupons" to="/customer-coupons" ><TbShoppingBag id="bag"/><span id="count">{count} </span></NavLink>
+                                     </span><br/>
                 <NavLink to="/customer-home"><FaHome/> Home</NavLink>
                 <span> | </span>  <NavLink to="/about">About</NavLink>       
 
@@ -42,8 +62,10 @@ function Menu(): JSX.Element {
                 
                                 <NavLink to="/customer/all-coupons">All Coupons</NavLink><span> | </span>
                                 
-                                <NavLink to="/customer-coupons">My Coupons</NavLink><span> | </span>
-                                <NavLink to="/customerDetails">Customer Details</NavLink>
+                                <NavLink to="/customer-coupons">My Coupons</NavLink><span>
+                                     {/* |  */}
+                                     </span>
+                                {/* <NavLink to="/customerDetails">Customer Details</NavLink> */}
 
             </>}
 
