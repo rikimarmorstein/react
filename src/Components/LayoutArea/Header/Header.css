@@ -33,6 +33,16 @@ margin-top: 35px;
 color: white;
 font-family: cursive,Serif, Garamond, "Courier New";
 }
+.Header h3{
+	/* margin: auto; */
+/* position: absolute; */
+padding-left: 570px ;
+margin-top: 35px;
+
+color: white;
+font-family: cursive,Serif, Garamond, "Courier New";
+}
+
 .logo{
 	margin-top: 15px;
 	margin-left: 20px;

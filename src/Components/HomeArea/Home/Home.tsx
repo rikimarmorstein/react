@@ -13,13 +13,17 @@ import CouponList from "../../CompanyArea/CouponList/CouponList";
 import CouponCardPurchase from "../../CustomerArea/CouponCardPurchase copy/CouponCardPurchase";
 import CouponDetailsPurchase from "../../CustomerArea/CouponDetailsPurchase/CouponDetailsPurchase";
 import Loading from "../../SharedArea/Loading/Loading";
+import {RiRestaurantFill} from "react-icons/ri";
 import {ImSearch} from "react-icons/im";
+import {MdElectricalServices, MdFastfood} from "react-icons/md";
+import {TbBeachOff} from "react-icons/tb";
+import {FaGifts} from "react-icons/fa";
 
-import "./Home.css";
 import store from "../../../Redux/Store";
 import { Button, FormControlLabel, Paper, Slide, Switch, Theme, createStyles, makeStyles } from "@mui/material";
 import React from "react";
 import { log } from "console";
+import "./Home.css";
 
 function Home(): JSX.Element {
     
@@ -94,13 +98,22 @@ function Home(): JSX.Element {
         setCoupons(fillteredCoupons);
         fillteredCoupons.map((c)=> couponId= c.id);
         }
+
+        function handleAllChange() {
+            let fillteredCoupons = store.getState().couponsState.coupons;
+            fillteredCoupons = fillteredCoupons.filter((coupon)=>{
+                    return coupon;
+            })
+        setCoupons(fillteredCoupons);
+        fillteredCoupons.map((c)=> couponId= c.id);            }
+
     return (
         <div className="Home" id="coupons-list-top">
-<button onClick={handleFoodChange} >FOOD</button>
-<button onClick={handleELECTRICITYChange} >ELECTRICITY</button>
-<button onClick={handleRESTAURANTChange} >RESTAURANT</button>
-<button onClick={handleVACATIONChange} >VACATION</button>
-<button >ALL</button>
+<button onClick={handleFoodChange} > <MdFastfood/> <br/>FOOD</button>
+<button onClick={handleELECTRICITYChange} ><MdElectricalServices/> <br/> ELECTRICITY</button>
+<button onClick={handleRESTAURANTChange} ><RiRestaurantFill/> <br/> RESTAURANT</button>
+<button onClick={handleVACATIONChange} ><TbBeachOff/><br/> VACATION</button>
+<button onClick={handleAllChange} ><FaGifts/> <br/>All</button>
 						<h1 className="fluttering">Top Coupons</h1>
                         <form ><ImSearch/>
 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}

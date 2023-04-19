@@ -7,7 +7,7 @@ function Header(): JSX.Element {
 			{/* <img src={giftImage}/> */}
                  <h1>Coupons</h1><ImGift className="logo"/>
                 <h2>By Riki</h2>
-                
+                <h3>ghjkjhg</h3>
         </div>
     );
 }
