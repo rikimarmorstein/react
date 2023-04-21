@@ -77,19 +77,25 @@ function CouponList(): JSX.Element {
 //     setCoupons(fillteredCoupons);
 // }
 
-
 function handlePriceChange(e:ChangeEvent<HTMLInputElement>) {
     const currentPrice = +e.currentTarget.value;
     setSelectedPrice(currentPrice);
+    
    let fillteredCoupons = store.getState().couponsState.coupons;
    if (currentPrice != 0) {
             fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                     return coupon.price <= currentPrice;
             })
         }
-        
-        setCoupons(fillteredCoupons);
-     }
+        if (selectedCategory != "ALL") {
+          
+                     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
+                            return coupon.category === selectedCategory;
+                     })
+                 }
+               
+              setCoupons(fillteredCoupons);  
+                   }
 
 
 function handleNameChange(e:ChangeEvent<HTMLInputElement>) {
@@ -119,6 +125,8 @@ function handleFoodChange() {
     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
             return coupon.category === "FOOD";
     })
+    setSelectedCategory("FOOD");
+
     if (selectedPrice != 0) {
                 fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                        return coupon.price <= selectedPrice;
@@ -133,6 +141,8 @@ function handleELECTRICITYChange() {
     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
             return coupon.category === "ELECTRICITY";
     })
+    setSelectedCategory("ELECTRICITY");
+
     if (selectedPrice != 0) {
         fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                return coupon.price <= selectedPrice;
@@ -147,6 +157,8 @@ function handleRESTAURANTChange() {
     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
             return coupon.category === "RESTAURANT";
     })
+    setSelectedCategory("RESTAURANT");
+
     if (selectedPrice != 0) {
         fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                return coupon.price <= selectedPrice;
@@ -161,6 +173,8 @@ function handleVACATIONChange() {
     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
             return coupon.category === "VACATION";
     })
+    setSelectedCategory("VACATION");
+
     if (selectedPrice != 0) {
         fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                return coupon.price <= selectedPrice;
@@ -176,6 +190,8 @@ function handleAllChange() {
     fillteredCoupons = fillteredCoupons.filter((coupon)=>{
             return coupon;
     })
+    setSelectedCategory("ALL");
+
     if (selectedPrice != 0) {
         fillteredCoupons = fillteredCoupons.filter((coupon)=>{
                return coupon.price <= selectedPrice;
@@ -194,12 +210,12 @@ fillteredCoupons.map((c)=> couponId= c.id);
 <form className="formPrice">
 <span>Until price:</span> <input type="number" name="price" id="price" placeholder="Until price" min={0} onChange={handlePriceChange} value={selectedPrice} />
 </form>
-<button onClick={handleFoodChange} > <MdFastfood/> <br/>FOOD</button>
-<button onClick={handleELECTRICITYChange} ><MdElectricalServices/> <br/> ELECTRICITY</button>
-<button onClick={handleRESTAURANTChange} ><RiRestaurantFill/> <br/> RESTAURANT</button>
-<button onClick={handleVACATIONChange} ><TbBeachOff/><br/> VACATION</button>
-<button onClick={handleAllChange} ><FaGifts/> <br/>All</button>
-
+<button onClick={handleFoodChange} value={"FOOD"}> <MdFastfood/> <br/>FOOD</button>
+<button onClick={handleELECTRICITYChange} value={"ELECTRICITY"}><MdElectricalServices/> <br/> ELECTRICITY</button>
+<button onClick={handleRESTAURANTChange} value={"RESTAURANT"}><RiRestaurantFill/> <br/> RESTAURANT</button>
+<button onClick={handleVACATIONChange} value={"VACATION"}><TbBeachOff/><br/> VACATION</button>
+<button onClick={handleAllChange} value={"ALL"}><FaGifts/> <br/>All</button>
+ 
                         <form ><ImSearch/>
 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}
  value={selectedName} /> 

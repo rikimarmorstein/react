@@ -138,7 +138,7 @@ function Login(): JSX.Element {
                 </select> */} 
 
  <label>Client Type: </label>  <FaUserAlt className="userIcon"/>            <br />
- <table >
+ <table ><tbody>
                 {/* <select defaultValue="" required {...register("clientType")}>
                     <option disabled value="">Client Type</option>
                     <option value={ClientType.ADMINISTRATOR}>Admin</option>
@@ -152,7 +152,7 @@ function Login(): JSX.Element {
         <td >       <input type="radio" id="Company" name="Company" value={ClientType.COMPANY} aria-label="Company" required {...register("clientType")}/><span>Company</span>              </td>
 
 
-        <td >     <input type="radio" id="Customer" name="Customer" value={ClientType.CUSTOMER} aria-label="Customer" required {...register("clientType")}/><span>Customer</span>              </td></tr></table >
+        <td >     <input type="radio" id="Customer" name="Customer" value={ClientType.CUSTOMER} aria-label="Customer" required {...register("clientType")}/><span>Customer</span>              </td></tr></tbody></table >
 
               <br />
               <br />
