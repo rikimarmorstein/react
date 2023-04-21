@@ -5,7 +5,9 @@ import Company from "../../../Models/Company";
 import adminService from "../../../Services/AdminService";
 import notificationService from "../../../Services/NotificationService";
 import {AiOutlineFileDone} from "react-icons/ai";
-
+import {FaUserAlt} from "react-icons/fa";
+import {MdMarkEmailUnread} from "react-icons/md";
+import {RiLockPasswordFill} from "react-icons/ri";
 import "./UpdateCompany.css";
 
 function UpdateCompany(): JSX.Element {
@@ -51,21 +53,21 @@ function UpdateCompany(): JSX.Element {
 <div>
                 <h2>Update Company</h2>
 <form >
-                <label>Name: </label>
+                <label><FaUserAlt/> Name: </label>
                 <input type="text" {...register("name",
                  {
                     required:{value:true, message:"Missing name"} ,
                 minLength:{value:2, message:"name too short"
                 }})} />
                 <span>{formState.errors?.name?.message}</span>
-                <label>Email: </label>
+                <label><MdMarkEmailUnread/> Email: </label>
                 <input type="email" {...register("email",
                  {
                     required:{value:true, message:"Missing email"} ,
                 minLength:{value:2, message:"email too short"
                 }})} />
                 <span>{formState.errors?.email?.message}</span>
-                <label>Password: </label>
+                <label><RiLockPasswordFill/> Password: </label>
                 <input type="password" {...register("password",
                  {
                     required:{value:true, message:"Missing password"} ,

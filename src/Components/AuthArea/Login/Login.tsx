@@ -207,9 +207,9 @@ function Login(): JSX.Element {
                 
                 <TextField id="email" label="email" variant="outlined" required {...register ("email",
                     {
-                      required: { value: true, message: "Missing email" },
-                      validate: (value) => isValidateEmail(value)|| "Invalid email address",
-                      minLength:{value:2, message:"Email too short"}   
+                      // required: { value: true, message: "Missing email" },
+                      // validate: (value) => isValidateEmail(value)|| "Invalid email address",
+                      // minLength:{value:2, message:"Email too short"}   
                   }
                 )}
               InputProps={{
@@ -257,7 +257,7 @@ function Login(): JSX.Element {
         </Select>
       </FormControl>
       <br /> */}
-                <br />
+                
                 <Button variant="outlined" color="primary" type="submit">
                     Login
                 </Button>

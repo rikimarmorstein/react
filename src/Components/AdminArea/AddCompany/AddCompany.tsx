@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Company from "../../../Models/Company";
 import adminService from "../../../Services/AdminService";
 import notificationService from "../../../Services/NotificationService";
+import {FaUserAlt} from "react-icons/fa";
+import {MdAttachEmail} from "react-icons/md";
+import {RiLockPasswordFill} from "react-icons/ri";
+
 import "./AddCompany.css";
 
 function AddCompany(): JSX.Element {
@@ -36,7 +40,7 @@ function AddCompany(): JSX.Element {
             <div>
                <form>
                 <h2>Add Company</h2>
-                <label>Name: </label>
+                <label><FaUserAlt/> Name: </label>
                 <input type="text" {...register("name",
                  {required:{value:true, message:"Missing name"} ,
                  validate: (value) => isValidateName(value)|| "Name should contains only letters",
@@ -44,7 +48,7 @@ function AddCompany(): JSX.Element {
                      
                 <span>{formState.errors?.name?.message}</span>
                 <br/>
-                <label>Email: </label>
+                <label><MdAttachEmail/> Email: </label>
                 <input type="email" {...register("email",
                  {
                     required:{value:true, message:"Missing email"} ,
@@ -54,7 +58,7 @@ function AddCompany(): JSX.Element {
                                 })} />
                 <span>{formState.errors?.email?.message}</span><br/>
 
-                <label>Password: </label>
+                <label><RiLockPasswordFill/> Password: </label>
                 <input type="password" {...register("password",
                  {
                     required:{value:true, message:"Missing password"} ,

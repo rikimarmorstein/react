@@ -40,12 +40,12 @@ color: rgb(83, 79, 79);
     width: 100%;
 
 }
-.Login #email{
-    width: 100%;
-}
+/* .Login #email{
+font-size: 35px;} */
 
 .Login .emailIcon{
     margin-right: 10px;
+    font-size: 20px;
 }
 .Login .userIcon{
     margin-right: 25px;

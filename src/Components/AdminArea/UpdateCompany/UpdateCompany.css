@@ -1,18 +1,28 @@
 .UpdateCompany button{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    width: 150px;
-    height: 30px;
+    /* width: 150px; */
+    height: 40px;
     padding-top: 4px;
 	font-size: 15px;
-    color: white;
-    background-color: brown;
+    color: rgb(0, 0, 0);
+    background-color:  rgb(189, 163, 18);
     margin-top: 10px;
+    box-sizing: border-box;
 
 }
+.UpdateCompany input{
+    margin-bottom: 10px;
+
+}
+
 
 .UpdateCompany span{
     position: absolute;
     margin-left:20px ;
     color: red;
+    }
+
+    .UpdateCompany form{
+border: 1px solid black;
     }

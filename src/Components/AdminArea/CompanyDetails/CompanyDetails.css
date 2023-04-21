@@ -1,5 +1,5 @@
 .CompanyDetails {
-    
+    width: 250px;
   display: inline-block;
   border: 1px solid black;
   padding: 10px;
@@ -10,20 +10,24 @@
     text-align: left;
 }
 .CompanyDetails a{
-  color: rgb(175, 23, 23);
-  color: white;
+  /* color:  rgb(189, 163, 18); */
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
 
 }
 
 
 .CompanyDetails button{
-  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(2, 2, 2);
 font-size: 15px;
-  border-radius: 10px;
-  width: 80px;
-  height: 30px;
-  margin: 5px;
-  color: white;
-    background-color: brown;
+  border-radius: 5px;
+  /* width: 80px; */
+  height: 35px;
+  /* margin: 5px; */
+  color: rgb(0, 0, 0);
+    background-color: rgb(189, 163, 18);
+    box-sizing: border-box;
+margin-bottom: 10px;
+width: 100%;
 }

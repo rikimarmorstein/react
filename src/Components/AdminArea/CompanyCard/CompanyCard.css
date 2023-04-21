@@ -3,7 +3,7 @@
     height: 120px;
     display: inline-flex;
     text-align: left;
-    background-image: linear-gradient(90deg, rgb(255, 255, 255), white);
+	/* background-image: linear-gradient(57deg,rgba(255,255,255,1.00) 0%,rgb(105, 103, 103) 46.63%,rgb(242, 194, 37) 100%); */
     border: 2px solid black;
     margin: 10px;
     padding: 20px;

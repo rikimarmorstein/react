@@ -34,6 +34,12 @@ function CustomerDetails(): JSX.Element {
 
 } }
 }
+
+function edit(){
+    navigate("/admin/customer-update/"+customerId);
+
+}
+
     return (
         <div className="CompanyDetails">
             <div>
@@ -45,12 +51,8 @@ function CustomerDetails(): JSX.Element {
                     <h3>Email: {customer.email}</h3>
                     <h3>Password: {customer.password}</h3>
                     <br/>
-<button >
-                    <NavLink to={"/admin/customer/"+customerId} onClick={deleteCustomer}>Delete   <BsFillTrash3Fill/></NavLink>
-</button>
-<button >
-                    <NavLink to={"/admin/customer-update/"+customerId} >   <BsFillPencilFill/>   Edit</NavLink>
-               </button>
+<button onClick={deleteCustomer}><BsFillTrash3Fill/> Delete</button>
+<button onClick={edit} > <BsFillPencilFill/>   Edit  </button>
                 </>
             )}   
             </div>

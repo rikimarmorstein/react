@@ -1,18 +1,26 @@
 .UpdateCustomer button{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    width: 150px;
-    height: 30px;
+    /* width: 150px; */
+    height: 40px;
     padding-top: 4px;
 	font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: rgb(189, 163, 18);
 margin-top: 10px;
+box-sizing: border-box;
 
 }
+.UpdateCustomer input{
+    margin-bottom: 10px;
 
+}
 .UpdateCustomer span{
     position: absolute;
     margin-left:20px ;
     color: red;
     }
+
+    .UpdateCustomer form{
+        border: 1px solid black;
+            }

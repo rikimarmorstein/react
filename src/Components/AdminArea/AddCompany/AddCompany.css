@@ -1,9 +1,10 @@
 .AddCompany button{
 	border: 1px solid black;
     border-radius: 5px;
-    background-color: brown;
-    color: white;
+    background-color: rgb(189, 163, 18);
+    color: black;
     margin-top: 10px;
+    height: 40px;
 }
 .AddCompany select, .AddCompany input{
     border-radius: 5px;
@@ -14,7 +15,9 @@
     margin-left:20px ;
     color: red;
     }
-
+    .AddCompany input, .AddCompany button{
+        margin-bottom: 10px;
+    }
     
 .AddCompany form{
     border: 2px solid black;

@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Customer from "../../../Models/Customer";
 import adminService from "../../../Services/AdminService";
 import notificationService from "../../../Services/NotificationService";
+import {FaUserAlt} from "react-icons/fa";
+import {MdAttachEmail} from "react-icons/md";
+import {RiLockPasswordFill} from "react-icons/ri";
+
 import "./AddCustomer.css";
 
 function AddCustomer(): JSX.Element {const {register, handleSubmit, formState} = useForm<Customer>();
@@ -35,7 +39,7 @@ return (
         <div>
         <form>
             <h2>Add customer</h2>
-            <label>First Name: </label>
+            <label><FaUserAlt/> First Name: </label>
             <input type="text" {...register("firstName",
              {
                 required:{value:true, message:"Missing first name"} ,
@@ -44,7 +48,7 @@ return (
         })} />
             <span>{formState.errors?.firstName?.message}</span>
 <br/>
-            <label>Last Name: </label>
+            <label><FaUserAlt/> Last Name: </label>
             <input type="text" {...register("lastName",
              {
                 required:{value:true, message:"Missing last name"} ,
@@ -52,7 +56,7 @@ return (
             validate: (value) => isValidateName(value)|| "Name should contains only letters"
         })} />
             <span>{formState.errors?.lastName?.message}</span><br/>
-            <label>Email: </label>
+            <label><MdAttachEmail/> Email: </label>
             <input type="email" {...register("email",
              {
                 required:{value:true, message:"Missing email"} ,
@@ -60,7 +64,7 @@ return (
             minLength:{value:2, message:"email too short"
             }})} />
             <span>{formState.errors?.email?.message}</span><br/>
-            <label>Password: </label>
+            <label><RiLockPasswordFill/> Password: </label>
             <input type="password" {...register("password",
              {
                 required:{value:true, message:"Missing password"} ,

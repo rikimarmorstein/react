@@ -5,7 +5,9 @@ import Customer from "../../../Models/Customer";
 import adminService from "../../../Services/AdminService";
 import notificationService from "../../../Services/NotificationService";
 import {AiOutlineFileDone} from "react-icons/ai";
-
+import {FaUserAlt} from "react-icons/fa";
+import {MdMarkEmailUnread} from "react-icons/md";
+import {RiLockPasswordFill} from "react-icons/ri";
 import "./UpdateCustomer.css";
 
 function UpdateCustomer(): JSX.Element {
@@ -49,27 +51,27 @@ notificationService.error(error)
               <div>
 			                <h2>Update customer</h2>
                             <form >
-                            <label>First Name: </label>
+                            <label><FaUserAlt/> First Name: </label>
             <input type="text" {...register("firstName",
              {
                 required:{value:true, message:"Missing first name"} ,
             minLength:{value:2, message:"name too short"}})} />
             <span>{formState.errors?.firstName?.message}</span>
 
-            <label>Last Name: </label>
+            <label><FaUserAlt/> Last Name: </label>
             <input type="text" {...register("lastName",
              {
                 required:{value:true, message:"Missing last name"} ,
             minLength:{value:2, message:"name too short"}})} />
             <span>{formState.errors?.lastName?.message}</span>
-            <label>Email: </label>
+            <label><MdMarkEmailUnread/> Email: </label>
             <input type="email" {...register("email",
              {
                 required:{value:true, message:"Missing email"} ,
             minLength:{value:2, message:"email too short"
             }})} />
             <span>{formState.errors?.email?.message}</span>
-            <label>Password: </label>
+            <label><RiLockPasswordFill/> Password: </label>
             <input type="password" {...register("password",
              {
                 required:{value:true, message:"Missing password"} ,
