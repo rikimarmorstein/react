@@ -46,12 +46,15 @@ function CouponCardPurchase(props:CouponCardProps): JSX.Element {
 
     async function purchase(){
             try {
-                await customerService.purchaseCoupon(id);
-        
+                if(store.getState().authState.token!=undefined){
+            await customerService.purchaseCoupon(id);
                 notificationService.success("Coupon purchased");
-            
-                navigate("/customer-coupons");
+                            navigate("/customer-coupons");
+        }else{
+            navigate("/login");
+        }
             } catch (error:any) {
+
                 notificationService.error(error);
             }
         }

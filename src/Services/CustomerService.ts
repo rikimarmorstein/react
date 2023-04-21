@@ -1,7 +1,7 @@
 import Coupon from "../Models/Coupon";
 import Customer from "../Models/Customer";
 import store from "../Redux/Store";
-import {  addPurcahseCouponAction, fetchCouponAction, fetchCouponPurchasesAction } from "../Redux/CouponState";
+import {  addPurcahseCouponAction, fetchCouponAction, fetchCouponPurchasesAction, updateCouponAction } from "../Redux/CouponState";
 import appConfig from "../Utils/Config";
 import tokenAxios from "../Utils/Interceptors";
 import axios from "axios";
@@ -46,9 +46,22 @@ class CustomerService{
     // }
     const purchasedCoupon = response.data;
     store.dispatch(addPurcahseCouponAction(purchasedCoupon));
+
+    store.dispatch(updateCouponAction(purchasedCoupon));
+
     // return couponp;
        }
+    //    public async updatePurchaseCoupon(couponId: number):Promise<void>{
+       
+    // let coupon= store.getState().couponsState.coupons.find(c=>c.id===couponId );
+    // console.log(coupon.amount);
+    
+    // coupon.amount = coupon.amount-1;
+    // console.log(coupon.amount);
 
+    // store.dispatch(updateCouponAction(coupon));
+
+    //    }
 //redux???
 public async getCustomerDetails():Promise<Customer>{
     const response=await tokenAxios.get<Customer>(appConfig.customerUrl+"details");

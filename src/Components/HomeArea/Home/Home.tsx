@@ -113,7 +113,7 @@ function Home(): JSX.Element {
 <button onClick={handleELECTRICITYChange} ><MdElectricalServices/> <br/> ELECTRICITY</button>
 <button onClick={handleRESTAURANTChange} ><RiRestaurantFill/> <br/> RESTAURANT</button>
 <button onClick={handleVACATIONChange} ><TbBeachOff/><br/> VACATION</button>
-<button onClick={handleAllChange} ><FaGifts/> <br/>All</button>
+<button onClick={handleAllChange} ><FaGifts/> <br/>All coupons</button>
 						<h1 className="fluttering">Top Coupons</h1>
                         <form ><ImSearch/>
 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}

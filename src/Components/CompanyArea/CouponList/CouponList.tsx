@@ -15,6 +15,8 @@ import {MdElectricalServices, MdFastfood} from "react-icons/md";
 import {TbBeachOff} from "react-icons/tb";
 import {FaGifts} from "react-icons/fa";
 import "./CouponList.css";
+import { getActiveElement } from "@testing-library/user-event/dist/utils";
+import styled from "@emotion/styled";
 
 function CouponList(): JSX.Element {
 
@@ -214,8 +216,8 @@ fillteredCoupons.map((c)=> couponId= c.id);
 <button onClick={handleELECTRICITYChange} value={"ELECTRICITY"}><MdElectricalServices/> <br/> ELECTRICITY</button>
 <button onClick={handleRESTAURANTChange} value={"RESTAURANT"}><RiRestaurantFill/> <br/> RESTAURANT</button>
 <button onClick={handleVACATIONChange} value={"VACATION"}><TbBeachOff/><br/> VACATION</button>
-<button onClick={handleAllChange} value={"ALL"}><FaGifts/> <br/>All</button>
- 
+<button onClick={handleAllChange} value={"All"}><FaGifts/> <br/>All coupons</button>
+
                         <form ><ImSearch/>
 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}
  value={selectedName} /> 

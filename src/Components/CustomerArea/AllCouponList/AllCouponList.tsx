@@ -214,7 +214,7 @@ fillteredCoupons.map((c)=> couponId= c.id);
 <button onClick={handleELECTRICITYChange} value={"ELECTRICITY"}><MdElectricalServices/> <br/> ELECTRICITY</button>
 <button onClick={handleRESTAURANTChange} value={"RESTAURANT"}><RiRestaurantFill/> <br/> RESTAURANT</button>
 <button onClick={handleVACATIONChange} value={"VACATION"}><TbBeachOff/><br/> VACATION</button>
-<button onClick={handleAllChange} value={"ALL"}><FaGifts/> <br/>All</button>
+<button onClick={handleAllChange} value={"All"}><FaGifts/> <br/>All coupons</button>
  
                         <form ><ImSearch/>
 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}

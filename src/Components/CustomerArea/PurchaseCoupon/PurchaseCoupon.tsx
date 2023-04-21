@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Coupon from "../../../Models/Coupon";
@@ -10,8 +10,7 @@ import CouponCardPurchase from "../CouponCardPurchase copy/CouponCardPurchase";
 import "./PurchaseCoupon.css";
 
 
-function PurchaseCoupon(): JSX.Element {
-    // const {register, handleSubmit, formState, setValue} = useForm<number>();
+ function PurchaseCoupon(): JSX.Element {
     const [coupon, setCoupon] = useState<Coupon>();
 
     const navigate = useNavigate();
@@ -21,19 +20,11 @@ function PurchaseCoupon(): JSX.Element {
 
     
     useEffect(()=>{
-        // await adminService.getOneCompany(companyId);
-// notificationService.success("Company has been updated");
+       
     companyService.getOneCoupon(id)
     .then((c)=>{
         setCoupon(c)
-        // setValue("category", c.category);
-        // setValue("title", c.title);
-        // setValue("description", c.description);
-        // setValue("startDate", c.startDate);
-        // setValue("endDate", c.endDate);
-        // setValue("amount", c.amount);
-        // setValue("price", c.price);
-        // setValue("imageName", c.imageName);
+       
     })
 .catch((err)=>
  notificationService.error(err)
@@ -43,13 +34,11 @@ function PurchaseCoupon(): JSX.Element {
     async function purchase(){
         try {
             await customerService.purchaseCoupon(id);
-    
             notificationService.success("coupon Added");
         
             navigate("/customer-coupons");
         } catch (error:any) {
             console.dir(error.message);
-            // alert(error.message);
             console.log(error);
             
             notificationService.error(error);
@@ -57,12 +46,11 @@ function PurchaseCoupon(): JSX.Element {
     }
      
     
-    return (
-        <div className="PurchaseCoupon">
-            { coupon && <CouponCardPurchase key={id} coupon={coupon}  />}
-            {/* <button onClick={purchase}>kl</button> */}
+     return (
+      <div className="PurchaseCoupon">
+           { coupon && <CouponCardPurchase key={id} coupon={coupon}  />} 
 			</div>
-    );
+   );
 }
 
-export default PurchaseCoupon;
+ export default PurchaseCoupon;

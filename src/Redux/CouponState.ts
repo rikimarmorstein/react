@@ -36,7 +36,6 @@ export function fetchCouponPurchasesAction(coupons: Coupon[]): CouponsAction {
 export function addCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.AddCoupon, payload: coupon };
 }
-
 export function updateCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.UpdateCoupon, payload: coupon };
 }
@@ -68,7 +67,7 @@ export function couponReducer(currentState: CouponState = new CouponState(), act
             break;
         case CouponActionType.AddPurchaseCoupon:
             newState.myCoupons.push(action.payload);
-            break;
+            break;            
         case CouponActionType.UpdateCoupon: // here payload is a single product to update
             const indexToUpdate = newState.coupons.findIndex(c => c.id === action.payload.id);
             if (indexToUpdate >= 0) newState.coupons[indexToUpdate] = action.payload;
