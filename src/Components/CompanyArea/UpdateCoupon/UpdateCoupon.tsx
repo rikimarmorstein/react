@@ -57,9 +57,9 @@ notificationService.error(error)
 
     return (
         <div className="UpdateCoupon">
-			                <h2>Update Coupon</h2>
               
                             <form >
+			                <h2>Update Coupon</h2>
                             <label>Category: </label>
                 <select {...register("category")} name="category" id="category">
                     <option disabled value="">Select...</option>

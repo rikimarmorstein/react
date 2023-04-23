@@ -75,8 +75,9 @@ function Menu(): JSX.Element {
 
                 <span> | </span>  <NavLink to="/company/all-coupons">All Coupons</NavLink> <span> | </span>
                                
-                                <NavLink to="/company-add-coupon">Add Coupon</NavLink><span> | </span>
-                                <NavLink to="/companyDetails">Company Details</NavLink>
+                                <NavLink to="/company-add-coupon">Add Coupon</NavLink>
+                                {/* <span> | </span>
+                                <NavLink to="/companyDetails">Company Details</NavLink> */}
             </>}
 
             {clientType === ClientType.ADMINISTRATOR && <>

@@ -12,7 +12,6 @@ function CompanyList(): JSX.Element {
     const [companies, setCompanies] = useState<Company[]>(store.getState().companiesState.companies);
     const [selectedName, setSelectedName] = useState<string>("");
     let companyId :number;
-
     
     useEffect(()=>{
         (async ()=>{
@@ -35,13 +34,12 @@ function CompanyList(): JSX.Element {
         
             fillteredCompanies = fillteredCompanies.filter((company)=>{
                     return company.name.toUpperCase().match(currentNameCase) ;
-                    ;
-            }  
+              }  
            )
               setCompanies(fillteredCompanies);
             fillteredCompanies.map((c)=> companyId= c.id);
-       
-    }
+
+           }
     return (
         <div className="CompanyList" id="companies-list-top">
 
@@ -54,11 +52,11 @@ function CompanyList(): JSX.Element {
     <CompanyCard key={c.id} company={c}/>
 ))}
 
-{companies.length===0 && store.getState().companiesState.companies.length>0 }
-{store.getState().companiesState.companies.length===0 &&  <span> No companies</span>}
+{store.getState().companiesState.companies.length===0 &&  <h1> No Companies</h1>}
+<div className="list-top-company">
 {
-    companies.length > 0 && <a id="list-top-company" href="#companies-list-top" title="Scroll up">👆</a>
-    }
+    companies.length > 0 && <a href="#companies-list-top" title="Scroll up">👆</a>
+    }</div>
 
         </div>
     );

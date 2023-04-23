@@ -1,9 +1,11 @@
 
 
-   .CompanyList #list-top-company{
-        position: absolute;
-      bottom: 0;
-      margin-bottom: 20px;
+   .CompanyList .list-top-company{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px !important;
+    float: right !important;
+    margin-right: 10px !important;
       
     }
     .CompanyList form{
@@ -20,5 +22,5 @@
       font-size: 15px;
       width: 230px;
       margin: 0;
-float: right;
+      float: right;
     }

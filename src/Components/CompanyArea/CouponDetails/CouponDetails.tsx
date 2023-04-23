@@ -57,7 +57,6 @@ function formatDate( date: Date) {
             <div>
 			{coupon && (
                 <>
-                    {/* <h4>ID: {coupon.id}</h4> */}
                     <h3>Category: {coupon.category}</h3>
                     <hr/>
                     <h3>Title: {coupon.title}</h3>
@@ -66,17 +65,10 @@ function formatDate( date: Date) {
                     <h3>End date: {formatDate(coupon.endDate)}</h3>
                     <h3>Amount: {coupon.amount}</h3>
                     <h3>Price: {coupon.price}</h3>
-                    <img src={coupon.image} alt="" />
-                    {/* <img src={appConfig.files+"uploadFile/"+  coupon.image} /> */}
-
-                    <br/>
-                    <br/>
-                     {/* | </br> */}
-                     
-<button ><NavLink to={"/company/coupon/"+couponId} onClick={deleteCoupon}> <BsFillTrash3Fill/> Delete </NavLink></button>   
-
-                 {/* <NavLink to={"/company/coupon/"+couponId} onClick={deleteCoupon}>Delete  <img src="spam"/></NavLink> */}
-                    <button >      <NavLink to={"/company/coupon-update/"+couponId} > <BsFillPencilFill/>  Edit </NavLink></button> 
+                    <img src={coupon.image} alt="" /><br/><br/>
+                                          
+                    <button ><NavLink to={"/company/coupon/"+couponId} onClick={deleteCoupon}> <BsFillTrash3Fill/> Delete </NavLink></button>   
+                    <button ><NavLink to={"/company/coupon-update/"+couponId} > <BsFillPencilFill/>  Edit </NavLink></button> 
                
                 </>
             )}   

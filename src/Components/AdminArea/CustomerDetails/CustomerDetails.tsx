@@ -49,10 +49,9 @@ function edit(){
                     <h3>Last Name: {customer.lastName}</h3>
                     <hr/>
                     <h3>Email: {customer.email}</h3>
-                    <h3>Password: {customer.password}</h3>
-                    <br/>
+                    <h3>Password: {customer.password}</h3><br/>
 <button onClick={deleteCustomer}><BsFillTrash3Fill/> Delete</button>
-<button onClick={edit} > <BsFillPencilFill/>   Edit  </button>
+<button onClick={edit}><BsFillPencilFill/> Edit</button>
                 </>
             )}   
             </div>

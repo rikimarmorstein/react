@@ -10,7 +10,6 @@
     text-align: left;
 }
 .CompanyDetails a{
-  /* color:  rgb(189, 163, 18); */
   color: black;
   width: 100%;
   box-sizing: border-box;
@@ -22,9 +21,7 @@
   border: 1px solid rgb(2, 2, 2);
 font-size: 15px;
   border-radius: 5px;
-  /* width: 80px; */
   height: 35px;
-  /* margin: 5px; */
   color: rgb(0, 0, 0);
     background-color: rgb(189, 163, 18);
     box-sizing: border-box;

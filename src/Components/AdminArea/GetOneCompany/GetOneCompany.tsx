@@ -1,6 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import Company from "../../../Models/Company";
 import store from "../../../Redux/Store";
 import adminService from "../../../Services/AdminService";
@@ -12,11 +11,7 @@ function GetOneCompany(): JSX.Element {
 
     const [company, setCompany] = useState<Company[]>(store.getState().companiesState.companies);
     const [selectedName, setSelectedName] = useState<string>("");
-    const {register, handleSubmit, formState} = useForm<Company>();
-    const params = useParams();
-    const name = params.name;
-    const id =8 ;
-    const navigate = useNavigate();
+    // const params = useParams();
     let companyId :number;
 
      useEffect(()=>{
@@ -35,14 +30,14 @@ function handleNameChange(e:ChangeEvent<HTMLInputElement>) {
     
     const currentName = e.currentTarget.value;
     setSelectedName(currentName);
-    let fillteredCompanies = store.getState().companiesState.companies;
+    let filteredCompanies = store.getState().companiesState.companies;
     const currentNameCase = currentName.toUpperCase();
-           fillteredCompanies = fillteredCompanies.filter((company)=>{
+           filteredCompanies = filteredCompanies.filter((company)=>{
                 return company.name.toUpperCase().match(currentNameCase) ;
          }  
         )
-    setCompany(fillteredCompanies);
-    fillteredCompanies.map((c)=> companyId= c.id);
+    setCompany(filteredCompanies);
+    filteredCompanies.map((c)=> companyId= c.id);
     }
     return (
         <div className="GetOneCompany">

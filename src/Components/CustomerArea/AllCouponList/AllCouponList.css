@@ -12,7 +12,9 @@ margin: 20px;
   margin-bottom: 20px;
   
 }
-
+.AllCouponsList button:focus {
+	background-color:black !important;
+	}
 .AllCouponList button{
 	margin-top: 0px;
 	/* padding-top: 0; */
@@ -74,6 +76,9 @@ border-top: none;
     
   }
   
+.AllCouponList button:focus{
+	background-color: black;
+}
   
 
   .AllCouponList #price{

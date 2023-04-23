@@ -5,15 +5,16 @@
 margin: 20px;
 } */
 
-.CouponList #list-top-coupon{
-    position: absolute;
-  bottom: 0;
-  margin-bottom: 20px;
-  
+.CouponList .list-top-coupon{
+	position: absolute;
+    bottom: 0;
+    margin-bottom: 40px !important;
+    float: right !important;
+    margin-right: 10px !important;
 }
 
-.CouponList .form  :active{
-background-color: black;
+.CouponList button:focus {
+background-color:black !important;
 }
 
 .CouponList button{

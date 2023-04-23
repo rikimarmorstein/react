@@ -3,7 +3,6 @@ import Customer from "../../../Models/Customer";
 import store from "../../../Redux/Store";
 import adminService from "../../../Services/AdminService";
 import notificationService from "../../../Services/NotificationService";
-import Loading from "../../SharedArea/Loading/Loading";
 import CustomerCard from "../CustomerCard/CustomerCard";
 import {ImSearch} from "react-icons/im";
 
@@ -25,8 +24,8 @@ function CustomerList(): JSX.Element {
             );
            })();
     }, []);
+
     function handleNameChange(e:ChangeEvent<HTMLInputElement>) {
-    
         const currentName = e.currentTarget.value;
         setSelectedName(currentName);
         let fillteredCompanies = store.getState().customersState.customers;
@@ -39,7 +38,9 @@ function CustomerList(): JSX.Element {
             )
             setCustomers(fillteredCompanies);
             fillteredCompanies.map((c)=> customerId= c.id);
-        }
+       }
+
+
     return (
         <div className="CustomerList" id="customers-list-top">
          <form ><ImSearch/>
@@ -49,12 +50,11 @@ function CustomerList(): JSX.Element {
 {customers.map((c)=>(
     <CustomerCard key={c.id} customer={c}/>
 ))}
-{customers.length===0 && store.getState().customersState.customers.length>0  && <Loading/>}
-{store.getState().customersState.customers.length===0 &&  <span> No Customers</span>}
-
+{store.getState().customersState.customers.length===0 &&  <h1> No Customers</h1>}<br/>
+<div className="list-top-customer">
 {
-    customers.length > 0 && <a id="list-top-customer" href="#customers-list-top" title="Scroll up">👆</a>
-    }
+    customers.length > 0 && <a  href="#customers-list-top" title="Scroll up">👆</a>
+    }</div>
         </div>
     );
 }

@@ -35,13 +35,11 @@ function UpdateCustomer(): JSX.Element {
 
 async function send(customer: Customer){
     customer.id=id;
-
 try {
 await adminService.updateCustomer(customer);
 notificationService.success("Customer has been updated");
 navigate("/admin/customer/"+id);
 } catch (error:any) {
-
 notificationService.error(error)
 }
 }
@@ -49,15 +47,14 @@ notificationService.error(error)
     return (
         <div className="UpdateCustomer">
               <div>
-			                <h2>Update customer</h2>
-                            <form >
-                            <label><FaUserAlt/> First Name: </label>
+			   <h2>Update customer</h2>
+               <form >
+               <label><FaUserAlt/> First Name: </label>
             <input type="text" {...register("firstName",
              {
                 required:{value:true, message:"Missing first name"} ,
             minLength:{value:2, message:"name too short"}})} />
             <span>{formState.errors?.firstName?.message}</span>
-
             <label><FaUserAlt/> Last Name: </label>
             <input type="text" {...register("lastName",
              {
@@ -72,7 +69,7 @@ notificationService.error(error)
             }})} />
             <span>{formState.errors?.email?.message}</span>
             <label><RiLockPasswordFill/> Password: </label>
-            <input type="password" {...register("password",
+            <input type="text" {...register("password",
              {
                 required:{value:true, message:"Missing password"} ,
             minLength:{value:2, message:"password too short"

@@ -1,13 +1,12 @@
 .CouponDetails {
 	display: inline-block;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 10px;
   margin: 30px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px;
-  /* font-weight: bold; */
   font-family: Garamond,Serif,  "Courier New" ;
-    text-align: left;
+  text-align: left;
 }
 .CouponDetails .img{
 width: 100%;
@@ -21,22 +20,18 @@ transform: translate(-50% ,-50%);
   text-align: center;
 }
 .CouponDetails a{
-  /* color: rgb(189, 163, 18); */
   color: black;
-
-  /* background-color: aliceblue; */
-  
 }
+
 .CouponDetails button{
-  /* background-color: rgb(255, 255, 255); */
-  border: 1px solid rgb(2, 2, 2);
+border: 1px solid rgb(2, 2, 2);
 font-size: 15px;
-  border-radius: 5px;
-  width: 80px;
-  height: 30px;
-  margin: 5px;
-  color: black;
-    background-color:  rgb(189, 163, 18);
+ border-radius: 5px;
+ width: 80px;
+ height: 30px;
+ margin: 5px;
+ color: black;
+ background-color:  rgb(189, 163, 18);
 }
 .CouponDetails img{
 border: 1.5px solid rgb(0, 0, 0);

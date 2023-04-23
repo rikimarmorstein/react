@@ -22,8 +22,6 @@ function CompanyDetails(): JSX.Element {
 
 
    async function deleteCompany(){
-    // navigate("/admin/company/"+companyId);
-
 
    if(window.confirm("Are you sure?")){
        try {
@@ -50,17 +48,11 @@ function edit(){
                     <h3>Name: {company.name}</h3>
                     <hr/>
                     <h3>Email: {company.email}</h3>
-                    <h3>Password: {company.password}</h3>
-                    <br/>
-                    <button onClick={deleteCompany}><BsFillTrash3Fill/>   Delete
-                    </button>
-                    <br/>
-                    <button onClick={edit}>
-                    <BsFillPencilFill/>   Edit
-               </button>
+                    <h3>Password: {company.password}</h3><br/>
+                    <button onClick={deleteCompany}><BsFillTrash3Fill/> Delete</button><br/>
+                    <button onClick={edit}><BsFillPencilFill/> Edit</button>
                 </>
-                
-                )}  
+                  )}  
               </div>
               <div>
               <NavLink id="backToHome" to="/admin/all-companies">↪</NavLink>

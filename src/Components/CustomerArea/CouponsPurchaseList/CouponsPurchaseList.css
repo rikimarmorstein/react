@@ -9,8 +9,8 @@ margin: 20px;
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
-    
-}
+ }
+ 
 .CouponsPurchaseList button{
 	margin-top: 0px;
 	/* padding-top: 0; */
@@ -29,6 +29,10 @@ height: 40px;
 font-family: cursive,Serif, Garamond, "Courier New";
 font-weight: bolder;
 }
+.CouponsPurchaseList button:focus {
+	background-color:black !important;
+	}
+
 .CouponsPurchaseList button:hover{
 	font-weight: bolder;
 border: 1.5px solid black;

@@ -45,16 +45,15 @@ return (
                 required:{value:true, message:"Missing first name"} ,
             minLength:{value:2, message:"name too short"},
             validate: (value) => isValidateName(value)|| "Name should contains only letters"
-        })} />
-            <span>{formState.errors?.firstName?.message}</span>
-<br/>
+            })} />
+            <span>{formState.errors?.firstName?.message}</span><br/>
             <label><FaUserAlt/> Last Name: </label>
             <input type="text" {...register("lastName",
              {
                 required:{value:true, message:"Missing last name"} ,
             minLength:{value:2, message:"name too short"},
             validate: (value) => isValidateName(value)|| "Name should contains only letters"
-        })} />
+             })} />
             <span>{formState.errors?.lastName?.message}</span><br/>
             <label><MdAttachEmail/> Email: </label>
             <input type="email" {...register("email",
@@ -65,7 +64,7 @@ return (
             }})} />
             <span>{formState.errors?.email?.message}</span><br/>
             <label><RiLockPasswordFill/> Password: </label>
-            <input type="password" {...register("password",
+            <input type="text" {...register("password",
              {
                 required:{value:true, message:"Missing password"} ,
             minLength:{value:2, message:"password too short"

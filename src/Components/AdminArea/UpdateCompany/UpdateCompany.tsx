@@ -24,18 +24,14 @@ function UpdateCompany(): JSX.Element {
                 setValue("name", c.name)
                 setValue("email", c.email)
                 setValue("password", c.password)
-                
-            })
+              })
         .catch((err)=>
          notificationService.error(err)
         );
     },[]);
-
-        
-
+      
     async function send(company: Company){
         company.id=id;
-
     try {
         await adminService.updateCompany(company);
         notificationService.success("Company has been updated");
@@ -52,7 +48,7 @@ function UpdateCompany(): JSX.Element {
         <div className="UpdateCompany">
 <div>
                 <h2>Update Company</h2>
-<form >
+                <form >
                 <label><FaUserAlt/> Name: </label>
                 <input type="text" {...register("name",
                  {
@@ -68,7 +64,7 @@ function UpdateCompany(): JSX.Element {
                 }})} />
                 <span>{formState.errors?.email?.message}</span>
                 <label><RiLockPasswordFill/> Password: </label>
-                <input type="password" {...register("password",
+                <input type="text" {...register("password",
                  {
                     required:{value:true, message:"Missing password"} ,
                 minLength:{value:2, message:"password too short"

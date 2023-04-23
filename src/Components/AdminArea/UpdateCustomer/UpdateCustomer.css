@@ -1,7 +1,6 @@
 .UpdateCustomer button{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    /* width: 150px; */
     height: 40px;
     padding-top: 4px;
 	font-size: 15px;
@@ -21,6 +20,6 @@ box-sizing: border-box;
     color: red;
     }
 
-    .UpdateCustomer form{
+ .UpdateCustomer form{
         border: 1px solid black;
-            }
+ }

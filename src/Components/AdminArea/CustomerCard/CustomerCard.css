@@ -10,9 +10,9 @@
     border-radius: 15px;
     box-shadow: 5px 5px 10px;
     font-family:  Garamond,Serif, "Courier New" ;
-font-size: larger;
+    font-size: larger;
     }
     
     .CustomerCard >div:last-child{
-        margin-left: auto;
-        }
+     margin-left: auto;
+     }

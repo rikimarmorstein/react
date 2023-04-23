@@ -12,5 +12,7 @@ box-sizing: border-box;
 }
 .UpdateCoupon span{
     color: red;
-    
-}
+} 
+.UpdateCoupon form{
+    border: 2px solid rgb(0, 0, 0);
+}  

@@ -45,29 +45,24 @@ function AddCompany(): JSX.Element {
                  {required:{value:true, message:"Missing name"} ,
                  validate: (value) => isValidateName(value)|| "Name should contains only letters",
                      minLength:{value:2, message:"name too short"}})} />
-                     
-                <span>{formState.errors?.name?.message}</span>
-                <br/>
+                 <span>{formState.errors?.name?.message}</span><br/>
                 <label><MdAttachEmail/> Email: </label>
                 <input type="email" {...register("email",
                  {
                     required:{value:true, message:"Missing email"} ,
                     validate: (value) => isValidateEmail(value)|| "Email must include @ and .",
                 minLength:{value:2, message:"email too short"}
-                
-                                })} />
+                 })} />
                 <span>{formState.errors?.email?.message}</span><br/>
-
                 <label><RiLockPasswordFill/> Password: </label>
-                <input type="password" {...register("password",
+                <input type="text" {...register("password",
                  {
                     required:{value:true, message:"Missing password"} ,
                 minLength:{value:2, message:"password too short"
                 }})} />
                 <span>{formState.errors?.password?.message}</span>
                 <button onClick={handleSubmit(send)} title="Add company">Add</button>
-                    
-            </form>
+                </form>
                 </div>           
                 </div>
     );

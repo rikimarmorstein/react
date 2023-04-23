@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Coupon from "../../../Models/Coupon";
-import appConfig from "../../../Utils/Config";
 import {BsFillPencilFill} from "react-icons/bs";
 
 import "./CouponCard.css";
@@ -39,17 +38,12 @@ interface CouponCardProps{
                 end date: {formatDate(props.coupon.endDate)}<br/>
                 amount: {props.coupon.amount}<br/>
                 price: {props.coupon.price}
-                {/* <img src={appConfig.files+"uploadFile/"+ props.coupon.image} alt="" /> */}
                 <div>
-    {/* <NavLink to={"/products/details/"+props.coupon.id}> */}
-     {/* <img src={appConfig.companyUrl + props.coupon.imageName} alt="" /> */}
-{/* </NavLink> */}
+   
 </div>
-                </div>
-               <br/>
+                </div><br/>
 
                 <NavLink to={"/company/coupon/"+props.coupon.id} title="Edit and cancel"><BsFillPencilFill/></NavLink>
-
 
             </div>
         );

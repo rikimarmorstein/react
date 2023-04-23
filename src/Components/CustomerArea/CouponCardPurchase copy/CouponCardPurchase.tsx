@@ -51,7 +51,9 @@ function CouponCardPurchase(props:CouponCardProps): JSX.Element {
                 notificationService.success("Coupon purchased");
                             navigate("/customer-coupons");
         }else{
+            notificationService.error("You need to login");
             navigate("/login");
+
         }
             } catch (error:any) {
 

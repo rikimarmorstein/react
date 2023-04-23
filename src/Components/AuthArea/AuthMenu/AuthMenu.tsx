@@ -6,7 +6,7 @@ import { logoutAction as logoutCompany } from "../../../Redux/CompanyState";
 import { logoutAction as logoutCoupon} from "../../../Redux/CouponState";
 import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import authService from "../../../Services/AuthService";
-import {FaUserAlt} from "react-icons/fa";
+import {FaUserCircle} from "react-icons/fa";
 import {CgUserList} from "react-icons/cg";
 
 import {FiLogOut} from "react-icons/fi";
@@ -66,7 +66,7 @@ function AuthMenu(): JSX.Element {
             }
             {user &&
                 <>
-                    <span >{user.clientType==="CUSTOMER" &&  <NavLink id="details" to="/customerDetails"><FaUserAlt title="Customer details" /></NavLink> }  Hello {user.name} | </span>
+                    <span >{user.clientType==="CUSTOMER" &&  <NavLink id="details" to="/customerDetails"><FaUserCircle title="Customer details" /></NavLink> }{user.clientType==="COMPANY" &&  <NavLink id="details" to="/companyDetails"><FaUserCircle title="Company details" /></NavLink> }  Hello {user.name} | </span>
                     <NavLink to="" onClick={logout} id="logout">Logout <FiLogOut className="out"/></NavLink>
                     {/* <br/>{user.clientType==="CUSTOMER" &&  <NavLink id="details" to="/customerDetails"><FaUserAlt title="Customer details" /></NavLink> } */}
                 </>   }
