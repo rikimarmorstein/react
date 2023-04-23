@@ -1,11 +1,7 @@
-import { Avatar } from "@mui/material";
-import "./Footer.css";
 import {BsGithub} from "react-icons/bs";
 import {BsWhatsapp} from "react-icons/bs";
 import {MdAlternateEmail} from "react-icons/md";
-
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "./Footer.css";
 
 
 function Footer(): JSX.Element {

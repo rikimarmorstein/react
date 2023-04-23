@@ -1,4 +1,3 @@
-import { createStore } from "redux";
 import Coupon from "../Models/Coupon";
 
 export class CouponState {
@@ -40,7 +39,7 @@ export function updateCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.UpdateCoupon, payload: coupon };
 }
 
-export function addPurcahseCouponAction(coupon: Coupon): CouponsAction {
+export function addPurchaseCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.AddPurchaseCoupon, payload: coupon };
 }
 export function deleteCouponAction(id: number): CouponsAction {
@@ -56,23 +55,23 @@ export function couponReducer(currentState: CouponState = new CouponState(), act
     const newState = { ...currentState }; // duplicate current state
 
     switch (action.type) {
-        case CouponActionType.FetchCoupons: // here payload is all products
+        case CouponActionType.FetchCoupons: // here payload is all coupons
             newState.coupons=action.payload;
             break;
-        case CouponActionType.FetchCouponsPurchases: // here payload is all products
+        case CouponActionType.FetchCouponsPurchases: // here payload is all coupons
             newState.myCoupons=action.payload;
             break;
-            case CouponActionType.AddCoupon: // here payload is a single product to add
+            case CouponActionType.AddCoupon: // here payload is a single coupon to add
                 newState.coupons.push(action.payload);
             break;
         case CouponActionType.AddPurchaseCoupon:
             newState.myCoupons.push(action.payload);
             break;            
-        case CouponActionType.UpdateCoupon: // here payload is a single product to update
+        case CouponActionType.UpdateCoupon: // here payload is a single coupon to update
             const indexToUpdate = newState.coupons.findIndex(c => c.id === action.payload.id);
             if (indexToUpdate >= 0) newState.coupons[indexToUpdate] = action.payload;
             break;
-        case CouponActionType.DeleteCoupon: // here payload is an id of product to delete
+        case CouponActionType.DeleteCoupon: // here payload is an id of coupon to delete
             const indexToDelete = newState.coupons.findIndex(c => c.id === action.payload);
             if (indexToDelete >= 0) newState.coupons.splice(indexToDelete, 1);
             break;
@@ -84,8 +83,4 @@ export function couponReducer(currentState: CouponState = new CouponState(), act
 
     return newState;
 }
-
-// 6 Products Store object to manage all products state
-
-// export const couponsStore = createStore(couponReducer);
 

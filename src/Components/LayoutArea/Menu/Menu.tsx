@@ -1,11 +1,9 @@
-// import { log } from "console";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import ClientType from "../../../Models/ClientType";
 import store from "../../../Redux/Store";
 import {FaHome} from "react-icons/fa";
 import {TbShoppingBag} from "react-icons/tb";
-
 import "./Menu.css";
 
 function Menu(): JSX.Element {
@@ -21,7 +19,6 @@ function Menu(): JSX.Element {
         return unsubscribe;
 
     }, []);
-
 
 
     const [count, setCount]= useState<number>(0);
@@ -43,52 +40,37 @@ function Menu(): JSX.Element {
 {clientType === undefined && <>
            
            <NavLink to="/home"><FaHome/>  Home</NavLink>    <span> | </span>
-<NavLink to="/about">About</NavLink>       
+            <NavLink to="/about">About</NavLink>
+
          </> }
 
-
-                              
-
-
-
             {clientType === ClientType.CUSTOMER && <>
-                                     <span id="spanBag">
-                                     <NavLink id="myCoupons" to="/customer-coupons" ><TbShoppingBag id="bag"/><span id="count">{count} </span></NavLink>
-                                     </span><br/>
-                <NavLink to="/customer-home"><FaHome/> Home</NavLink>
-                <span> | </span>  <NavLink to="/about">About</NavLink>       
-
-                <span> | </span> 
-                
-                                <NavLink to="/customer/all-coupons">All Coupons</NavLink><span> | </span>
-                                
-                                <NavLink to="/customer-coupons">My Coupons</NavLink><span>
-                                     {/* |  */}
+                  <span id="spanBag">
+                   <NavLink id="myCoupons" to="/customer-coupons" ><TbShoppingBag id="bag"/><span id="count">{count} </span></NavLink>
+                   </span><br/>
+                <NavLink to="/customer-home"><FaHome/> Home</NavLink>  <span> | </span>  
+                 <NavLink to="/about">About</NavLink> <span> | </span> 
+                <NavLink to="/customer/all-coupons">All Coupons</NavLink><span> | </span>
+                 <NavLink to="/customer-coupons">My Coupons</NavLink><span>
+                                    
                                      </span>
-                                {/* <NavLink to="/customerDetails">Customer Details</NavLink> */}
-
             </>}
 
             {clientType === ClientType.COMPANY && <>
-                  <NavLink to="/company-home"><FaHome/> Home</NavLink>
-                <span> | </span>  <NavLink to="/about">About</NavLink>       
-
-                <span> | </span>  <NavLink to="/company/all-coupons">All Coupons</NavLink> <span> | </span>
+                  <NavLink to="/company-home"><FaHome/> Home</NavLink> <span> | </span>
+                 <NavLink to="/about">About</NavLink>   <span> | </span>      
+                <NavLink to="/company/all-coupons">All Coupons</NavLink> <span> | </span>
+                 <NavLink to="/company-add-coupon">Add Coupon</NavLink>
                                
-                                <NavLink to="/company-add-coupon">Add Coupon</NavLink>
-                                {/* <span> | </span>
-                                <NavLink to="/companyDetails">Company Details</NavLink> */}
             </>}
 
             {clientType === ClientType.ADMINISTRATOR && <>
-                <NavLink to="/admin-home"><FaHome/> Home</NavLink>
-                <span> | </span>  <NavLink to="/about">About</NavLink>       
-
-                 <span> | </span>  <NavLink to="/admin/all-companies">All Companies</NavLink><span> | </span>
+                <NavLink to="/admin-home"><FaHome/> Home</NavLink> <span> | </span> 
+                <NavLink to="/about">About</NavLink>   <span> | </span>      
+                 <NavLink to="/admin/all-companies">All Companies</NavLink><span> | </span>
                   <NavLink to="/admin/add-company">Add Company</NavLink><span> | </span>
-
-                                <NavLink to="/admin/all-customers">All Customers</NavLink>
-                                <span> | </span>  <NavLink to="/admin/add-customer">Add Customer</NavLink>
+                  <NavLink to="/admin/all-customers">All Customers</NavLink><span> | </span>
+                  <NavLink to="/admin/add-customer">Add Customer</NavLink>
 
             </>}
 </div>

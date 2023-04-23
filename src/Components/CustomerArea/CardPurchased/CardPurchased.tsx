@@ -29,7 +29,6 @@ function CardPurchased(props: CouponCardProps): JSX.Element {
                 <h4> {props.coupon.title} - {props.coupon.description}</h4>
                 valid until: {formatDate(props.coupon.endDate)}<br />
                 {props.coupon.price} NIS
-                {/* imageName: {props.coupon.imageName}<br /> */}
             </div>
         </div>
     );

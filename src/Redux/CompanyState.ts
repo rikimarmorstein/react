@@ -1,4 +1,3 @@
-import { createStore } from "redux";
 import Company from "../Models/Company";
 
 
@@ -53,11 +52,8 @@ export function companyReducer(currentState: CompanyState = new CompanyState(), 
         case CompanyActionType.FetchCompanies: // here payload is all products
             newState.companies = action.payload;
             break;
-            // case CompanyActionType.FetchCompany: 
-            // newState.companies = action.payload;
-            // break;
         case CompanyActionType.AddCompany: // here payload is a single product to add
-                newState.companies.push(action.payload);
+            newState.companies.push(action.payload);
             break;
         case CompanyActionType.UpdateCompany: // here payload is a single product to update
             const indexToUpdate = newState.companies.findIndex(c => c.id === action.payload.id);
@@ -74,8 +70,3 @@ export function companyReducer(currentState: CompanyState = new CompanyState(), 
 
     return newState;
 }
-
-// 6 Products Store object to manage all products state
-
-// export const companiesStore = createStore(companyReducer);
-

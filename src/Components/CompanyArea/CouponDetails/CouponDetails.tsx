@@ -3,12 +3,9 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Coupon from "../../../Models/Coupon";
 import companyService from "../../../Services/CompanyService";
 import notificationService from "../../../Services/NotificationService";
-import spam from "../../../Assets/Images/Loading.gif";
 import {BsFillTrash3Fill} from "react-icons/bs";
 import {BsFillPencilFill} from "react-icons/bs";
-
 import "./CouponDetails.css";
-import appConfig from "../../../Utils/Config";
 
 function CouponDetails(): JSX.Element {
     
@@ -19,7 +16,7 @@ function CouponDetails(): JSX.Element {
 
     useEffect(()=>{
         companyService.getOneCoupon(couponId).then((c)=>setCoupon(c))
-        // .catch((e)=>notificationService.error(e));
+         .catch((e)=>notificationService.error(e));
     }, []);
     
 
@@ -34,7 +31,6 @@ function CouponDetails(): JSX.Element {
    navigate("/company/all-coupons");
 
 } catch (error:any) {
-//    alert(error.message);
    notificationService.error(error);
 
 } }

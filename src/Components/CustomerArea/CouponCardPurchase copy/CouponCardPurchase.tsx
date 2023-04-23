@@ -49,7 +49,7 @@ function CouponCardPurchase(props:CouponCardProps): JSX.Element {
                 if(store.getState().authState.token!=undefined){
             await customerService.purchaseCoupon(id);
                 notificationService.success("Coupon purchased");
-                            navigate("/customer-coupons");
+                navigate("/customer-coupons");
         }else{
             notificationService.error("You need to login");
             navigate("/login");
@@ -67,12 +67,11 @@ function CouponCardPurchase(props:CouponCardProps): JSX.Element {
 		<div>
                 <img src={props.coupon.image} alt=""/><br/>
                 <h3>{props.coupon.category}</h3>
-               <h2> {props.coupon.title}</h2>
-              <h3>  {props.coupon.description}</h3><br/>
+                <h2>{props.coupon.title}</h2>
+                <h3>{props.coupon.description}</h3><br/>
                 valid until: {formatDate(props.coupon.endDate)}<br/>
                 amount: {props.coupon.amount}<br/>
                 {props.coupon.price} NIS<br/>
-                {/* imageName: {props.coupon.imageName}<br/> */}
               </div>
                  <div className="purchase">
              

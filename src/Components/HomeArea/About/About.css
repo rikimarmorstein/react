@@ -3,16 +3,14 @@
     border-radius: 25px;
     margin:20px auto;
     width: 900px;
-    
     padding: 20px;
 text-align: left;
 box-shadow: 8px 8px 8px;
 color: rgb(145, 115, 17);
-/* font-family:  Garamond,Serif,  ; */
 font-size: 18px;
 font-family:Garamond, Verdana,sans-serif,Helvetica, Arial ;
-
 }
+
 .About b{
 margin-left: 20px;
 }
@@ -23,8 +21,6 @@ margin-left: 20px;
 }
 
 .About h3{
-
     text-align: right;
     font-family: Cambria, Georgia, Arial, Sans-serif;
-
     }

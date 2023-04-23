@@ -1,4 +1,3 @@
-import { createStore } from "redux";
 import Customer from "../Models/Customer";
 
 export class CustomerState {
@@ -14,8 +13,8 @@ export enum CustomerActionType {
 }
 
 export interface CustomersAction {
-    type: CustomerActionType; // action type
-    payload: any; // action data
+    type: CustomerActionType; 
+    payload: any; 
 }
 
 export function fetchCustomerAction(customers: Customer[]): CustomersAction {
@@ -39,20 +38,20 @@ export function logoutAction(): CustomersAction {
 
 
 export function customerReducer(currentState: CustomerState = new CustomerState(), action: CustomersAction): CustomerState {
-    const newState = { ...currentState }; // duplicate current state
+    const newState = { ...currentState };
 
     switch (action.type) {
-        case CustomerActionType.FetchCustomers: // here payload is all products
+        case CustomerActionType.FetchCustomers: 
             newState.customers = action.payload;
             break;
-        case CustomerActionType.AddCustomer: // here payload is a single product to add
+        case CustomerActionType.AddCustomer: 
                 newState.customers.push(action.payload);
             break;
-        case CustomerActionType.UpdateCustomer: // here payload is a single product to update
+        case CustomerActionType.UpdateCustomer: 
             const indexToUpdate = newState.customers.findIndex(c => c.id === action.payload.id);
             if (indexToUpdate >= 0) newState.customers[indexToUpdate] = action.payload;
             break;
-        case CustomerActionType.DeleteCustomer: // here payload is an id of product to delete
+        case CustomerActionType.DeleteCustomer:
             const indexToDelete = newState.customers.findIndex(c => c.id === action.payload);
             if (indexToDelete >= 0) newState.customers.splice(indexToDelete, 1);
             break;
@@ -65,4 +64,3 @@ export function customerReducer(currentState: CustomerState = new CustomerState(
 }
 
 
-// export const customersStore = createStore(customerReducer);

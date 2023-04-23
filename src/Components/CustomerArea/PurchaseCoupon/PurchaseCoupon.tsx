@@ -1,11 +1,9 @@
  import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import Coupon from "../../../Models/Coupon";
 import companyService from "../../../Services/CompanyService";
 import customerService from "../../../Services/CustomerService";
 import notificationService from "../../../Services/NotificationService";
-import CouponCard from "../../CompanyArea/CouponCard/CouponCard";
 import CouponCardPurchase from "../CouponCardPurchase copy/CouponCardPurchase";
 import "./PurchaseCoupon.css";
 
@@ -16,8 +14,6 @@ import "./PurchaseCoupon.css";
     const navigate = useNavigate();
     const params = useParams();
     const id = +params.couponId;
-    
-
     
     useEffect(()=>{
        

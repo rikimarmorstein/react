@@ -6,7 +6,6 @@ class Customer{
 	public email: string;
 	public password: string;
 	
-	// private List<Coupon> coupons;
 }
 
 export default Customer;

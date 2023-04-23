@@ -12,7 +12,6 @@ import CouponCard from "../../CompanyArea/CouponCard/CouponCard";
 import CouponList from "../../CompanyArea/CouponList/CouponList";
 import CouponCardPurchase from "../../CustomerArea/CouponCardPurchase copy/CouponCardPurchase";
 import CouponDetailsPurchase from "../../CustomerArea/CouponDetailsPurchase/CouponDetailsPurchase";
-import Loading from "../../SharedArea/Loading/Loading";
 import {RiRestaurantFill} from "react-icons/ri";
 import {ImSearch} from "react-icons/im";
 import {MdElectricalServices, MdFastfood} from "react-icons/md";
@@ -108,6 +107,7 @@ function Home(): JSX.Element {
     return (
         <div className="Home" id="coupons-list-top">
             <h1 className="fluttering">Top Coupons</h1>
+
 <form className="formPrice">
 <span>Until price:</span> <input type="number" name="price" id="price" placeholder="Until price" min={0} onChange={handlePriceChange} value={selectedPrice} />
 </form>
@@ -126,11 +126,10 @@ function Home(): JSX.Element {
 {coupons.map((c)=>(
     <CouponDetailsPurchase key={c.id} coupon={c}/>
 ))}
-
+<div className="top">
 {
-    coupons.length > 0 && <a id="top" href="#coupons-list-top" title="Scroll up">👆</a>
-        }
-
+    coupons.length > 0 && <a href="#coupons-list-top" title="Scroll up">👆</a>
+        }</div>
         </div>
     );
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Company from "../../../Models/Company";
 import companyService from "../../../Services/CompanyService";
 import notificationService from "../../../Services/NotificationService";
-import CompanyCard from "../../AdminArea/CompanyCard/CompanyCard";
 import "./GetCompanyDetails.css";
 
 
@@ -28,10 +27,10 @@ function GetCompanyDetails(): JSX.Element {
                {company &&    
                <div>
                 <h3>Name: {company.name}</h3>
-<hr/>
+                <hr/>
                 <h4>Email: {company.email}</h4>
-                    <h4>Password: {company.password}</h4>
-                            </div>        
+                <h4>Password: {company.password}</h4>
+                  </div>        
    }
                     
         </div>

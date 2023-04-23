@@ -116,9 +116,9 @@ function AllCouponList(): JSX.Element {
     <CouponCardPurchase key={c.id} coupon={c}/>
 )) : 
 <h2>No coupons found 🙁</h2>}
-
-{    coupons.length > 0 && <a id="list-top-coupons" href="#up" title="Scroll up">👆</a>
-    }
+<div className="list-top-coupons">
+{    coupons.length > 0 && <a href="#up" title="Scroll up">👆</a>
+    }</div>
     
         </div>
     );
