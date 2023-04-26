@@ -12,7 +12,7 @@ export class AuthState {
 
     public constructor() {
         this.token = sessionStorage.getItem("token");
-        if(this.token) {
+        if (this.token) {
             this.user = extractUser(this.token);
         }
     }
@@ -65,8 +65,8 @@ function extractUser(token: string): UserModel {
         user = new CompanyUserModel(container.clientType, container.sub, container.name, container.email, container.password);
     }
     else {
-        user = new AdminUserModel(container.clientType, container.sub, container.name ,container.email, container.password);
-    
+        user = new AdminUserModel(container.clientType, container.sub, container.name, container.email, container.password);
+
     }
     return user;
 }

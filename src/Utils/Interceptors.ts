@@ -1,6 +1,20 @@
 import axios from "axios";
 import store from "../Redux/Store";
 
+const tokenAxios = axios.create();
+
+tokenAxios.interceptors.request.use(request => {
+    if (store.getState().authState.token) {
+        request.headers.Authorization = "Bearer " + store.getState().authState.token;
+    }
+    return request;
+})
+
+export default tokenAxios;
+
+
+//or alternatively for each function sent to the server,
+//This option includes all the actions that need to be updated and there is no need to update anything else
 // class Interceptors{
 
 //     public create():void{
@@ -8,7 +22,6 @@ import store from "../Redux/Store";
 //             if(store.getState().authState.token){
 //                 requestObject.headers.Authorization= "Bearer " + store.getState().authState.token;
 //             }
-//             console.log(requestObject);
 
 //             return requestObject;
 
@@ -25,13 +38,3 @@ import store from "../Redux/Store";
 // const interceptors = new Interceptors();
 // export default interceptors;
 
-const tokenAxios = axios.create();
-
-tokenAxios.interceptors.request.use(request => {
-    if (store.getState().authState.token) {
-        request.headers.Authorization = "Bearer " + store.getState().authState.token;
-    }
-    return request;
-})
-
-export default tokenAxios;

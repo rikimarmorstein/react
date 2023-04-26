@@ -1,21 +1,34 @@
 .AddCoupon {
-    font-family: Garamond,Serif,  "Courier New" ;
+    font-family: Garamond, Serif, "Courier New";
 }
-    .AddCoupon form{
-border: 2px solid black;
+
+.AddCoupon form {
+    border: 2px solid black;
 }
-.AddCoupon button{
-font-family: Garamond,Serif,  "Courier New" ;
-border-radius: 5px;
-background-color: rgb(189, 163, 18);
-color: white;
-margin-top: 20px;
-margin-bottom: 20px;
+
+.AddCoupon input {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.AddCoupon button {
+    font-family: Garamond, Serif, "Courier New";
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
 
 }
 
-.AddCoupon span{
+.AddCoupon button:hover {
+    background-color: rgb(189, 163, 18);
+    color: black;
+    border: 1px solid black;
+}
+
+.AddCoupon span {
     color: red;
 }
-
-

@@ -1,81 +1,61 @@
 .AuthMenu {
-	position: absolute;
+    position: absolute;
     right: 25px;
     top: 30px;
-/* width: 30px; */
 }
 
-.AuthMenu a{
-    color:white;
-}  
-.AuthMenu .login:hover{
-    /* border: 1px solid rgb(109, 107, 107) ;padding:5px; */
+.AuthMenu a {
+    color: white;
+}
+
+.AuthMenu .login:hover {
     font-size: 50px;
-color: blue;
+    color: blue;
 }
 
-.AuthMenu .out{
+.AuthMenu .out {
     font-size: 25px;
-    /* margin-top: 2px; */
     float: right;
-margin-top: -2px;
+    margin-top: -2px;
 }
 
-.AuthMenu .login{
-    color:white;
+.AuthMenu .login {
+    color: white;
     font-size: 45px;
     margin-right: 15px;
 }
-.AuthMenu #logout{
-    color:white;
-    font-size: 15px ;
-    
-    /* float: right; */
-    
+
+.AuthMenu #logout {
+    color: white;
+    font-size: 15px;
 }
-.AuthMenu #logout :hover{
-    /* border: 1px solid rgb(109, 107, 107) ;padding:5px; */
-color:blue
+
+.AuthMenu #logout :hover {
+    color: blue
 }
 
 
-.AuthMenu #details{
-font-size: 30px;  
-float: left;
-margin-top: -7px;
-margin-right: 5px;
+.AuthMenu #details {
+    font-size: 30px;
+    float: left;
+    margin-top: -7px;
+    margin-right: 5px;
 }
 
-.AuthMenu #details :hover{
-    /* border: 1px solid  rgb(109, 107, 107) ;padding:5px; */
-    /* border-radius: 50px ; */
-    /* font-size: 20px ; */
+.AuthMenu #details :hover {
     color: blue;
-    /* float: right; */
-    }
+}
 
-    .AuthMenu #bag{
-        /* position: absolute; */
-        /* position: unset; */
-        /* right: 3%; */
-        /* top: 20px; */
-        margin-top: 40px;
-        /* text-decoration: none;  */
-        /* transform: scale(1.1);  */
-        color: white;
+.AuthMenu #bag {
+    margin-top: 40px;
+    color: white;
     font-size: 30px;
     float: right;
 
 }
-    
-    .AuthMenu #count{
-        /* position: fixed; */
-        /* top: 14%; */
+
+.AuthMenu #count {
     font-size: 10px;
     float: right;
     margin-top: 40px;
-    /* margin-right: 35px; */
-    }
-
-
-
+}

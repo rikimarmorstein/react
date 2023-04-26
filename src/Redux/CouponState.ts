@@ -3,18 +3,17 @@ import Coupon from "../Models/Coupon";
 export class CouponState {
     public coupons: Coupon[] = [];
     public myCoupons: Coupon[] = [];
-
 }
 
 // 2. Action Types - list of actions - enum
 export enum CouponActionType {
-    FetchCoupons="FetchCoupons",
-    FetchCouponsPurchases="FetchCouponsPurchases",
-    AddCoupon="AddCoupon",
-    AddPurchaseCoupon="AddPurchaseCoupon",
-    UpdateCoupon="UpdateCoupon",
-    DeleteCoupon="DeleteCoupon",
-    Logout="Logout"
+    FetchCoupons = "FetchCoupons",
+    FetchCouponsPurchases = "FetchCouponsPurchases",
+    AddCoupon = "AddCoupon",
+    AddPurchaseCoupon = "AddPurchaseCoupon",
+    UpdateCoupon = "UpdateCoupon",
+    DeleteCoupon = "DeleteCoupon",
+    Logout = "Logout"
 }
 
 // 3. Action - an interface describing a single command
@@ -31,14 +30,12 @@ export function fetchCouponAction(coupons: Coupon[]): CouponsAction {
 export function fetchCouponPurchasesAction(coupons: Coupon[]): CouponsAction {
     return { type: CouponActionType.FetchCouponsPurchases, payload: coupons };
 }
-
 export function addCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.AddCoupon, payload: coupon };
 }
 export function updateCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.UpdateCoupon, payload: coupon };
 }
-
 export function addPurchaseCouponAction(coupon: Coupon): CouponsAction {
     return { type: CouponActionType.AddPurchaseCoupon, payload: coupon };
 }
@@ -56,17 +53,17 @@ export function couponReducer(currentState: CouponState = new CouponState(), act
 
     switch (action.type) {
         case CouponActionType.FetchCoupons: // here payload is all coupons
-            newState.coupons=action.payload;
+            newState.coupons = action.payload;
             break;
         case CouponActionType.FetchCouponsPurchases: // here payload is all coupons
-            newState.myCoupons=action.payload;
+            newState.myCoupons = action.payload;
             break;
-            case CouponActionType.AddCoupon: // here payload is a single coupon to add
-                newState.coupons.push(action.payload);
+        case CouponActionType.AddCoupon: // here payload is a single coupon to add
+            newState.coupons.push(action.payload);
             break;
         case CouponActionType.AddPurchaseCoupon:
             newState.myCoupons.push(action.payload);
-            break;            
+            break;
         case CouponActionType.UpdateCoupon: // here payload is a single coupon to update
             const indexToUpdate = newState.coupons.findIndex(c => c.id === action.payload.id);
             if (indexToUpdate >= 0) newState.coupons[indexToUpdate] = action.payload;
@@ -75,9 +72,9 @@ export function couponReducer(currentState: CouponState = new CouponState(), act
             const indexToDelete = newState.coupons.findIndex(c => c.id === action.payload);
             if (indexToDelete >= 0) newState.coupons.splice(indexToDelete, 1);
             break;
-            case CouponActionType.Logout: 
-            newState.myCoupons=[];
-            newState.coupons=[];
+        case CouponActionType.Logout:
+            newState.myCoupons = [];
+            newState.coupons = [];
             break;
     }
 

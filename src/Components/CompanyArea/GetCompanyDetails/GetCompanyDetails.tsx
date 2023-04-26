@@ -8,31 +8,31 @@ import "./GetCompanyDetails.css";
 function GetCompanyDetails(): JSX.Element {
 
     const [company, setCompany] = useState<Company>();
-    useEffect(()=>{
-        (async ()=>{
+    useEffect(() => {
+        (async () => {
 
-            companyService.getCompanyDetails().then((company)=>{
+            companyService.getCompanyDetails().then((company) => {
                 setCompany(company);
-            }, (error)=>{
+            }, (error) => {
                 notificationService.error(error);
             });
-           
+
         })();
 
     }, []);
 
-    
+
     return (
         <div className="GetCompanyDetails">
-               {company &&    
-               <div>
-                <h3>Name: {company.name}</h3>
-                <hr/>
-                <h4>Email: {company.email}</h4>
-                <h4>Password: {company.password}</h4>
-                  </div>        
-   }
-                    
+            {company &&
+                <div>
+                    <h3>Name: {company.name}</h3>
+                    <hr />
+                    <h4>Email: {company.email}</h4>
+                    <h4>Password: {company.password}</h4>
+                </div>
+            }
+
         </div>
     );
 }

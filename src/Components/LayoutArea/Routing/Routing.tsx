@@ -30,41 +30,41 @@ function Routing(): JSX.Element {
         <div className="Routing">
 
             <Routes>
-            <Route path="/home" element={<Home/>}/>
-            <Route index element={<Home/>}/>
-            <Route path="/login" element={<Login />} />
-            <Route path="/about" element={<About />} />
+                <Route path="/home" element={<Home />} />
+                <Route index element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/about" element={<About />} />
 
 //admin
-            <Route path="/admin-home" element={<AdminArea/>}/>
-            <Route path="/admin/add-company" element={<AddCompany/>}/>
-            <Route path="/admin/all-companies" element={<CompanyList/>}/>
-            <Route path="/admin/company/:companyId" element={<CompanyDetails/>}/>
-            <Route path="/admin/company-update/:companyId" element={<UpdateCompany/>}/>
-            <Route path="/admin/company-delete/:companyId" element={<></>}/>
-            <Route path="/admin/add-customer" element={<AddCustomer/>}/>
-            <Route path="/admin/all-customers" element={<CustomerList/>}/>
-            <Route path="/admin/customer/:customerId" element={<CustomerDetails/>}/>
-            <Route path="/admin/customer-update/:customerId" element={<UpdateCustomer/>}/>
+                <Route path="/admin-home" element={<AdminArea />} />
+                <Route path="/admin/add-company" element={<AddCompany />} />
+                <Route path="/admin/all-companies" element={<CompanyList />} />
+                <Route path="/admin/company/:companyId" element={<CompanyDetails />} />
+                <Route path="/admin/company-update/:companyId" element={<UpdateCompany />} />
+                <Route path="/admin/company-delete/:companyId" element={<></>} />
+                <Route path="/admin/add-customer" element={<AddCustomer />} />
+                <Route path="/admin/all-customers" element={<CustomerList />} />
+                <Route path="/admin/customer/:customerId" element={<CustomerDetails />} />
+                <Route path="/admin/customer-update/:customerId" element={<UpdateCustomer />} />
 //company
-            <Route path="/company-home" element={<CompanyArea/>}/>
-            <Route path="/company/coupon/:couponId" element={<CouponDetails/>}/>
-            <Route path="/company/coupon-update/:couponId" element={<UpdateCoupon/>}/>
-            <Route path="/company/all-coupons" element={<CouponList/>}/>
-            <Route path="/company/companyDetails" element={<CompanyArea/>}/>
-            <Route path="/companyDetails" element={<GetCompanyDetails/>}/>
-            <Route path="/company-add-coupon" element={<AddCoupon/>}/>
+                <Route path="/company-home" element={<CompanyArea />} />
+                <Route path="/company/coupon/:couponId" element={<CouponDetails />} />
+                <Route path="/company/coupon-update/:couponId" element={<UpdateCoupon />} />
+                <Route path="/company/all-coupons" element={<CouponList />} />
+                <Route path="/company/companyDetails" element={<CompanyArea />} />
+                <Route path="/companyDetails" element={<GetCompanyDetails />} />
+                <Route path="/company-add-coupon" element={<AddCoupon />} />
 
-  //customer          
-            <Route path="/customer-home" element={<CustomerArea/>}/>
-            <Route path="/customer/all-coupons" element={<AllCouponList/>}/>
-            <Route path="/customer/purchase/:couponId" element={<PurchaseCoupon/>}/>
-            <Route path="/customer-coupons" element={<CouponsPurchaseList/>}/>
-            <Route path="/customerDetails" element={<GetCustomerDetails/>}/>
+  //customer
+                <Route path="/customer-home" element={<CustomerArea />} />
+                <Route path="/customer/all-coupons" element={<AllCouponList />} />
+                <Route path="/customer/purchase/:couponId" element={<PurchaseCoupon />} />
+                <Route path="/customer-coupons" element={<CouponsPurchaseList />} />
+                <Route path="/customerDetails" element={<GetCustomerDetails />} />
 
-            <Route path="*" element={<PageNotFound/>}/>
+                <Route path="*" element={<PageNotFound />} />
 
-			</Routes>
+            </Routes>
 
         </div>
     );

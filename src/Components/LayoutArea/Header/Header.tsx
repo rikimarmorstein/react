@@ -4,7 +4,7 @@ import "./Header.css";
 function Header(): JSX.Element {
     return (
         <div className="Header">
-			<img src={imageLogo}/>
+            <img src={imageLogo} />
         </div>
     );
 }

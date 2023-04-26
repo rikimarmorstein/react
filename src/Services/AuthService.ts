@@ -9,11 +9,11 @@ class AuthService {
     // Login to backend:
     public async login(credentials: CredentialsModel): Promise<void> {
         // Send credentials to backend, get back response: 
-        
+
         const response = await axios.post<string>(appConfig.authUrl, credentials);
         // Extract token: 
         const token = response.data;
-       // Update redux:
+        // Update redux:
         store.dispatch({ type: AuthActionType.Login, payload: token });
     }
 

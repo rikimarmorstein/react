@@ -1,59 +1,58 @@
-.Login input, .Login select,.Login button{
-	margin-top: 20px;
-padding: 10px;
-width: 100%;
-
-}
- .Login button{
-	margin-top: 20px;
-padding: 10px;
-width: 100%;
-
-}
-.Login #button{
-    background-color: rgb(197, 153, 31);
-    color: white;
-    /* padding-top: 20px; */
+.Login input,
+.Login select,
+.Login button {
     margin-top: 20px;
-    padding: 10px;    width: 100%;
-    
-}
-.Login #button:hover{
-    
- background-color: rgb(107, 97, 7);
-}
-.Login form{
-    border: 2px solid black;
-    width: 270px;
-    box-sizing: border-box;
-
-    /* background-image: linear-gradient(45deg, rgb(24, 22, 9), rgb(243, 209, 97)); */
-}
-.Login .eye{
-font-size: 35px;
-/* color: rgb(0, 4, 7); */
-margin-top: -17px;
-color: rgb(83, 79, 79);
-}
-.Login #password ,.Login #email{
-/* padding-top: 20px; */
+    padding: 10px;
     width: 100%;
 
 }
-/* .Login #email{
-font-size: 35px;} */
 
-.Login .emailIcon{
+.Login button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.Login #button {
+    background-color:white;
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.Login #button:hover {
+    background-color: rgb(197, 153, 31);
+    color: black;
+}
+
+.Login form {
+    border: 2px solid black;
+    width: 270px;
+    box-sizing: border-box;
+}
+
+.Login .eye {
+    font-size: 35px;
+    margin-top: -17px;
+    color: rgb(83, 79, 79);
+}
+
+.Login #password,
+.Login #email {
+    width: 100%;
+}
+
+.Login .emailIcon {
     margin-right: 10px;
     font-size: 20px;
 }
-.Login .userIcon{
+
+.Login .userIcon {
     margin-right: 25px;
     color: rgb(83, 79, 79);
-float: right;
+    float: right;
 }
-
-
-
-
-

@@ -1,5 +1,5 @@
 .GetCompanyDetails {
-	width: 250px;
+    width: 250px;
     height: 150;
     display: inline-flex;
     text-align: left;
@@ -8,7 +8,7 @@
     margin: 60px;
     padding: 20px;
     padding-left: 40px;
-    font-family: Garamond, Serif,  "Courier New" ;
+    font-family: Garamond, Serif, "Courier New";
     border-radius: 15px;
     box-shadow: 5px 5px 10px;
 }

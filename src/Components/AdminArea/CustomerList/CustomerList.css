@@ -1,11 +1,12 @@
-.CustomerList .list-top-customer{
-	position: absolute;
+.CustomerList .list-top-customer {
+  position: absolute;
   bottom: 0;
   margin-bottom: 40px;
   float: right !important;
   margin-right: 10px !important;
- }
- .CustomerList form{
+}
+
+.CustomerList form {
   left: auto;
   margin-left: 20px;
   height: 21px;
@@ -15,9 +16,9 @@
   box-shadow: 5px 5px 10px;
 }
 
-.CustomerList input{
+.CustomerList input {
   font-size: 15px;
   width: 230px;
   margin: 0;
-float: right;
+  float: right;
 }

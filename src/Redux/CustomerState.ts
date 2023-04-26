@@ -5,16 +5,16 @@ export class CustomerState {
 }
 
 export enum CustomerActionType {
-    FetchCustomers="FetchCustomers",
-    AddCustomer="AddCustomer",
-    UpdateCustomer="UpdateCustomer",
-    DeleteCustomer="DeleteCustomer",
-    Logout="Logout"
+    FetchCustomers = "FetchCustomers",
+    AddCustomer = "AddCustomer",
+    UpdateCustomer = "UpdateCustomer",
+    DeleteCustomer = "DeleteCustomer",
+    Logout = "Logout"
 }
 
 export interface CustomersAction {
-    type: CustomerActionType; 
-    payload: any; 
+    type: CustomerActionType;
+    payload: any;
 }
 
 export function fetchCustomerAction(customers: Customer[]): CustomersAction {
@@ -41,13 +41,13 @@ export function customerReducer(currentState: CustomerState = new CustomerState(
     const newState = { ...currentState };
 
     switch (action.type) {
-        case CustomerActionType.FetchCustomers: 
+        case CustomerActionType.FetchCustomers:
             newState.customers = action.payload;
             break;
-        case CustomerActionType.AddCustomer: 
-                newState.customers.push(action.payload);
+        case CustomerActionType.AddCustomer:
+            newState.customers.push(action.payload);
             break;
-        case CustomerActionType.UpdateCustomer: 
+        case CustomerActionType.UpdateCustomer:
             const indexToUpdate = newState.customers.findIndex(c => c.id === action.payload.id);
             if (indexToUpdate >= 0) newState.customers[indexToUpdate] = action.payload;
             break;
@@ -55,8 +55,8 @@ export function customerReducer(currentState: CustomerState = new CustomerState(
             const indexToDelete = newState.customers.findIndex(c => c.id === action.payload);
             if (indexToDelete >= 0) newState.customers.splice(indexToDelete, 1);
             break;
-            case CustomerActionType.Logout: 
-            newState.customers=[];
+        case CustomerActionType.Logout:
+            newState.customers = [];
             break;
     }
 

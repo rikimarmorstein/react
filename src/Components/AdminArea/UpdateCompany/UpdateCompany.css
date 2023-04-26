@@ -1,28 +1,28 @@
-.UpdateCompany button{
+.UpdateCompany button {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    /* width: 150px; */
-    height: 40px;
     padding-top: 4px;
-	font-size: 15px;
+    font-size: 15px;
     color: rgb(0, 0, 0);
-    background-color:  rgb(189, 163, 18);
+    background-color: rgb(189, 163, 18);
     margin-top: 10px;
     box-sizing: border-box;
 
 }
-.UpdateCompany input{
-    margin-bottom: 10px;
 
+.UpdateCompany input {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 295px;
 }
 
 
-.UpdateCompany span{
+.UpdateCompany span {
     position: absolute;
-    margin-left:20px ;
+    margin-left: 20px;
     color: red;
-    }
+}
 
-    .UpdateCompany form{
-border: 1px solid black;
-    }
+.UpdateCompany form {
+    border: 1px solid black;
+}

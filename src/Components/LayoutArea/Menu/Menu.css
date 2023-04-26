@@ -1,77 +1,77 @@
 .Menu {
-height: 100%;
-display: flex;	
-flex-direction: column;
-justify-content: end;
-padding-block-end: 10px;
-background-color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-block-end: 10px;
+    background-color: black;
 }
 
-.Menu .active{
-   color:white;
+.Menu .active {
+    color: white;
     font-weight: bold;
-    font-family: Serif, Garamond, "Courier New" ;
+    font-family: Serif, Garamond, "Courier New";
     padding: 10px;
     border: 1px solid white;
     padding-left: 20px;
     padding-right: 20px;
-border-bottom: none;
+    border-bottom: none;
 }
 
-.Menu a{
-    height: 10px;
-width: 200px;
-color:  rgb(189, 163, 18);
-padding-left: 20px;
-    padding-right: 20px;
-margin-bottom: 0px;
-font-weight: bold;
-}
-
-.Menu .NavLink{
+.Menu a {
     height: 10px;
     width: 200px;
-        color: white;
-        padding: 10px;
-}
-
-.Menu span{
+    color: rgb(189, 163, 18);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
     font-weight: bold;
 }
 
-.Menu a:hover{
+.Menu .NavLink {
+    height: 10px;
+    width: 200px;
+    color: white;
+    padding: 10px;
+}
+
+.Menu span {
+    font-weight: bold;
+}
+
+.Menu a:hover {
     height: 40px;
     width: 200px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
     border: 1px solid rgb(189, 163, 18);
-   }
-
-.Menu #bag{
-   margin-right: 20px;
-  color: white;
-font-size: 30px;
-float: right;
 }
 
-.Menu #bag:hover{
-color: blue;
+.Menu #bag {
+    margin-right: 20px;
+    color: white;
+    font-size: 30px;
+    float: right;
 }
 
-.Menu #count{
-   font-size: 10px;
-float: right;
+.Menu #bag:hover {
+    color: blue;
 }
 
-.Menu #myCoupons:hover{
-border: none;
+.Menu #count {
+    font-size: 10px;
+    float: right;
 }
 
-.Menu #myCoupons .active{
+.Menu #myCoupons:hover {
     border: none;
-  }
+}
 
-    .Menu #spanBag .active{
-        border: none;
-  }
+.Menu #myCoupons .active {
+    border: none;
+}
+
+.Menu #spanBag .active {
+    border: none;
+}

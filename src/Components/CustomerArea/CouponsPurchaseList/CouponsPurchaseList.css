@@ -1,68 +1,74 @@
-.CouponsPurchaseList .list-top{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 30px ;
-    float: right !important;
-    margin-right: 10px !important;
- }
- 
-.CouponsPurchaseList button{
+.CouponsPurchaseList .list-top {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 30px;
+	float: right !important;
+	margin-right: 10px !important;
+}
+
+.CouponsPurchaseList Button {
 	margin-top: 0px;
-	width: 100px;
+	width: 110px;
 	margin-bottom: 50px;
 	background-color: white;
-	color:  rgb(189, 163, 18);
-	margin-left: 10px;
+	color: rgb(189, 163, 18);
+	margin-left: 0px;
 	margin-right: 10px;
 	font-size: 12px;
-border: 1.5px solid black;
-border-top: none;
-height: 40px;
-font-family: cursive,Serif, Garamond, "Courier New";
-font-weight: bolder;
-}
-.CouponsPurchaseList button:focus {
-	background-color:black !important;
-	}
-
-.CouponsPurchaseList button:hover{
+	font-family: cursive, Serif, Garamond, "Courier New";
+	border: 1px solid rgb(145, 137, 137);
+	border-top: none;
+	height: 40px;
+	padding: 0px;
 	font-weight: bolder;
-border: 1.5px solid black;
-background-color: black;
-	color:  rgb(189, 163, 18);
+}
+
+.CouponsPurchaseList Button:hover {
+	background-color: rgba(128, 127, 124, 0.137);
+	border: 2px solid black;
 	border-top: none;
 }
 
-.CouponsPurchaseList form{
+.CouponsPurchaseList button:focus {
+	background-color: black;
+	border: 2px solid rgb(189, 163, 18);
+	border-top: none;
+
+}
+
+.CouponsPurchaseList form {
 	float: right;
 	margin-right: 50px;
 	height: 21px;
 	width: 200px;
 	font-size: 23px;
 	box-shadow: 5px 5px 10px;
-	margin-top:0px;
+	margin-top: 0px;
 	border: 1px solid black;
-border-radius: 0px;
-border-top: none;
-  }
-  
-  .CouponsPurchaseList #name{
+	border-radius: 0px;
+	border-top: none;
+}
+
+.CouponsPurchaseList #name:focus {
+	background-color:rgb(189, 163, 18);
+}
+.CouponsPurchaseList #name {
 	font-size: 13px;
 	width: 170px;
-  float: right;
-  }
+	float: right;
+}
 
-  .CouponsPurchaseList .formPrice{
-    float: left;
-    margin-left: 160px;
-    font-size: 15px;
-    width:140px;
-  }
-  
-    .CouponsPurchaseList #price{
-    font-size: 13px;
-    width: 65px;
-    float: left;
-  margin-left: 75px;
-  margin-top: -18px;
-    }
+.CouponsPurchaseList .formPrice {
+	float: left;
+	margin-left: 160px;
+	font-size: 15px;
+	width: 140px;
+}
+
+.CouponsPurchaseList #price {
+	font-size: 13px;
+	width: 65px;
+	float: left;
+	margin-left: 75px;
+	margin-top: -18px;
+}

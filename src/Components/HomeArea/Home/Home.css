@@ -1,125 +1,192 @@
-.Home h1{
-text-align: left;
-font-size: 30px;
-font-family: "Courier New",Serif, Garamond  ;
-text-shadow: 5px 5px 10px;
-margin-top: 0;
-margin-left: 20px;
-float: left;
-margin-top:15px;
- color:  rgb(189, 163, 18);
+.Home h1 {
+	text-align: left;
+	font-size: 30px;
+	font-family: "Courier New", Serif, Garamond;
+	text-shadow: 5px 5px 10px;
+	margin-top: 0;
+	margin-left: 20px;
+	float: left;
+	margin-top: 15px;
+	color: rgb(189, 163, 18);
 }
-.Home h2{
+
+.Home h2 {
 	padding-top: 50px;
 	text-align: center;
 
 }
-.Home .top{
+
+.Home .top {
 	position: absolute;
-    bottom: 0;
-    margin-bottom: 30px ;
-    float: right !important;
-    margin-right: 10px !important;
+	bottom: 0;
+	margin-bottom: 30px;
+	float: right !important;
+	margin-right: 10px !important;
 }
 
-.Home button{
+.Home Button {
 	margin-top: 0px;
-	width: 100px;
+	width: 110px;
 	margin-bottom: 50px;
 	background-color: white;
-	color:  rgb(189, 163, 18);
+	color: rgb(189, 163, 18);
 	margin-left: 0px;
 	margin-right: 10px;
 	font-size: 12px;
-border: 1.5px solid black;
-border-top: none;
-height: 40px;
-font-family: cursive,Serif, Garamond, "Courier New";
-font-weight: bolder;
-}
-.Home button:hover{
+	font-family: cursive, Serif, Garamond, "Courier New";
+	border: 1px solid rgb(145, 137, 137);
+	border-top: none;
+	height: 40px;
+	padding: 0px;
 	font-weight: bolder;
-border: 1.5px solid black;
-background-color: black;
-	color: rgb(133, 111, 17);
+}
+
+.Home Button:hover {
+	background-color: rgba(128, 127, 124, 0.137);
+	border: 2px solid black;
 	border-top: none;
 }
 
 
-.Home button:focus{
+.Home button:focus {
 	background-color: black;
+	border: 2px solid rgb(189, 163, 18);
+	border-top: none;
 }
 
-.Home .formPrice{
-    float: left;
-    margin-left: 70px;
-    font-size: 15px;
-    width:125px;
-margin-right: 0px;
-     }
-  
-	 .Home #price{
-    font-size: 13px;
-    width: 50px;
-    float: left;
-  margin-left: 75px;
-  margin-top: -18px;
-    }
+.Home .formPrice {
+	float: left;
+	margin-left: 70px;
+	font-size: 15px;
+	width: 125px;
+	margin-right: 0px;
+}
 
+.Home #price {
+	font-size: 13px;
+	width: 50px;
+	float: left;
+	margin-left: 75px;
+	margin-top: -18px;
+}
 
-/* 
-.fluttering{
-    -webkit-animation: fluttering .90s linear infinite; 
+.fluttering {
+	-webkit-animation: fluttering .90s linear infinite;
 	-moz-animation: fluttering .20s linear infinite;
 	-ms-animation: fluttering .00s linear infinite;
 	-o-animation: fluttering .90s linear infinite;
-	 animation: fluttering .90s linear infinite;
+	animation: fluttering .90s linear infinite;
 }
+
 @-webkit-keyframes fluttering {
-	0% { opacity: 1; }
-	20% { opacity: 1; }
-	50.01% { opacity: 0; }
-	50% { opacity: 0; }
+	0% {
+		opacity: 1;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	50.01% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
 }
+
 @-moz-keyframes fluttering {
-	0% { opacity: 1; }
-	00% { opacity: 1; }
-	50.01% { opacity: 0; }
-	50% { opacity: 0; }
+	0% {
+		opacity: 1;
+	}
+
+	00% {
+		opacity: 1;
+	}
+
+	50.01% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
 }
+
 @-ms-keyframes fluttering {
-	0% { opacity: 1; }
-	0% { opacity: 1; }
-	50.01% { opacity: 0; }
-	50% { opacity: 0; }
+	0% {
+		opacity: 1;
+	}
+
+	0% {
+		opacity: 1;
+	}
+
+	50.01% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
 }
+
 @-o-keyframes fluttering {
-	0% { opacity: 1; }
-	0% { opacity: 1; }
-	50.01% { opacity: 0; }
-	50% { opacity: 0; }
+	0% {
+		opacity: 1;
+	}
+
+	0% {
+		opacity: 1;
+	}
+
+	50.01% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
 }
+
 @keyframes fluttering {
-	0% { opacity: 1; }
-	0% { opacity: 1; }
-	50.01% { opacity: 0; }
-	50% { opacity: 0; }
-} */
-.Home form{
+	0% {
+		opacity: 1;
+	}
+
+	0% {
+		opacity: 1;
+	}
+
+	50.01% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+.Home form {
 	float: right;
 	margin-right: 50px;
 	height: 21px;
 	width: 200px;
 	font-size: 23px;
 	box-shadow: 5px 5px 10px;
-	margin-top:0px;
+	margin-top: 0px;
 	border: 1px solid black;
-border-radius: 0px;
-border-top: none;
-  }
-  
-  .Home input{
+	border-radius: 0px;
+	border-top: none;
+}
+
+.Home input {
 	font-size: 13px;
 	width: 170px;
-  float: right;
-  }
+	float: right;
+}
+
+.Home #name:focus {
+	background-color:rgb(189, 163, 18);
+}

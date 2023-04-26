@@ -3,14 +3,12 @@ import { NavLink } from "react-router-dom";
 import UserModel from "../../../Models/UserModel";
 import store from "../../../Redux/Store";
 import { logoutAction as logoutCompany } from "../../../Redux/CompanyState";
-import { logoutAction as logoutCoupon} from "../../../Redux/CouponState";
+import { logoutAction as logoutCoupon } from "../../../Redux/CouponState";
 import { logoutAction as logoutCustomer } from "../../../Redux/CustomerState";
 import authService from "../../../Services/AuthService";
-import {FaUserCircle} from "react-icons/fa";
-import {CgUserList} from "react-icons/cg";
-
-import {FiLogOut} from "react-icons/fi";
-
+import { FaUserCircle } from "react-icons/fa";
+import { CgUserList } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
 import "./AuthMenu.css";
 
 function AuthMenu(): JSX.Element {
@@ -19,10 +17,10 @@ function AuthMenu(): JSX.Element {
     const [user, setUser] = useState<UserModel>();
 
     useEffect(() => {
-        
+
         setUser(store.getState().authState.user); // First update
 
-        const unsubscribe = store.subscribe(()=>{
+        const unsubscribe = store.subscribe(() => {
             setUser(store.getState().authState.user); // Any other update
         });
 
@@ -36,49 +34,24 @@ function AuthMenu(): JSX.Element {
         store.dispatch(logoutCompany());
         store.dispatch(logoutCoupon());
         store.dispatch(logoutCustomer());
-        
+
     }
-
-    
-    // const [count, setCount]= useState<number>(0);
-
-    // useEffect(()=>{
-    //     setCount(store.getState().couponsState.myCoupons.length);
-    //     const unsubscribe = store.subscribe(()=>{
-    //     setCount(store.getState().couponsState.myCoupons.length);
-    //         });
-    //         return ()=>{
-    //             unsubscribe(); 
-    //         };
-    // },[]);
-
-    // if(count===0)return null;
 
 
     return (
         <div className="AuthMenu">
             {!user &&
                 <>
-                    <span > 
-                    <NavLink to="/login" title="Login"> <CgUserList className="login"/></NavLink></span>
-                    {/* <br/>Login */}
+                    <span >
+                        <NavLink to="/login" title="Login"> <CgUserList className="login" /></NavLink></span>
                 </>
             }
             {user &&
                 <>
-                    <span >{user.clientType==="CUSTOMER" &&  <NavLink id="details" to="/customerDetails"><FaUserCircle title="Customer details" /></NavLink> }{user.clientType==="COMPANY" &&  <NavLink id="details" to="/companyDetails"><FaUserCircle title="Company details" /></NavLink> }  Hello {user.name} | </span>
-                    <NavLink to="" onClick={logout} id="logout">Logout <FiLogOut className="out"/></NavLink>
-                    {/* <br/>{user.clientType==="CUSTOMER" &&  <NavLink id="details" to="/customerDetails"><FaUserAlt title="Customer details" /></NavLink> } */}
-                </>   }
-                
-                {/* <br/> */}
-{/* {user.clientType==="CUSTOMER" && 
-<>
-<NavLink to="/customer-coupons"><TbShoppingBag id="bag"/><span id="count">{count} </span></NavLink>
-</>} */}
-{/* <span id="bag"><TbShoppingBag/></span><span id="count"> {count}</span> */}
+                    <span >{user.clientType === "CUSTOMER" && <NavLink id="details" to="/customerDetails"><FaUserCircle title="Customer details" /></NavLink>}{user.clientType === "COMPANY" && <NavLink id="details" to="/companyDetails"><FaUserCircle title="Company details" /></NavLink>}  Hello {user.name} | </span>
+                    <NavLink to="" onClick={logout} id="logout">Logout <FiLogOut className="out" /></NavLink>
+                </>}
 
-         
         </div>
     );
 }

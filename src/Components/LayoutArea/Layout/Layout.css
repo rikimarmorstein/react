@@ -1,52 +1,36 @@
 .Layout {
-	height: 100%;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 20% 75% 5%;
-    /* grid-template-columns: repeat(6,1fr); */
-   /* width: 100%; */
-   /* overflow: auto ; */
-   overflow: auto;
-     align-items: stretch;
-     justify-items: stretch;
-     width: 100%;
-     overflow-x: scroll;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 20% 75% 5%;
+  align-items: stretch;
+  justify-items: stretch;
 }
+
 ::-webkit-scrollbar {
-    width: 18px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #E7E5E8;
-  }
-  ::-webkit-scrollbar-thumb {
-    /* background: #c7b61c;
-    border: 2px solid #E7E5E8; */
-    background: #ffffff;
-    border: 2px solid #000000;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(133, 114, 7);
-    border: 2px solid white;
-
- }
-.Layout header{
-    /* overflow: auto; */
-    /* height: 100%; */
-
-/* grid-column: span 6; */
+  width: 18px;
 }
 
-
-.Layout main ,.Layout footer{
-    /* overflow: auto; */
-
-    margin-top: 10px;
-    /* grid-column: span 6; */
+::-webkit-scrollbar-track {
+  background: #E7E5E8;
 }
-.Layout main {
-        overflow: auto;
-        
-} 
 
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border: 2px solid #000000;
+}
 
-    
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(133, 114, 7);
+  border: 2px solid white;
+}
+
+.Layout main,
+.Layout footer {
+  margin-top: 10px;
+}
+
+main {
+  overflow: auto;
+  height: 100%;
+}

@@ -1,34 +1,38 @@
 .Footer {
 	height: 100%;
-display: flex;	
-flex-direction: column;
-justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.Footer span{
+.Footer span {
 	color: black;
 }
-.git{
+
+.git {
 	margin-right: 10px;
 	color: black;
 }
-.git:hover{
+
+.git:hover {
 	color: blue;
 }
-.whatsapp{
+
+.whatsapp {
 	color: green;
 }
-.whatsapp:hover{
+
+.whatsapp:hover {
 	color: blue;
 }
-.email{
-text-align: center;
-margin-inline: auto;
+
+.email {
+	text-align: center;
+	margin-inline: auto;
 	color: rgb(148, 8, 8);
 	font-size: 18px;
 }
-.Footer a:hover{
-color: blue;
+
+.Footer a:hover {
+	color: blue;
 }
-
-

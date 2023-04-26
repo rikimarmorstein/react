@@ -1,5 +1,5 @@
 enum ClientType {
-	CUSTOMER = "CUSTOMER",
+    CUSTOMER = "CUSTOMER",
     COMPANY = "COMPANY",
     ADMINISTRATOR = "ADMIN"
 }

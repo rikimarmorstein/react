@@ -1,42 +1,40 @@
 .Header {
-position: absolute;
-margin: auto;
-width: 240px;
+	position: absolute;
+	margin: auto;
+	width: 240px;
 }
 
-.Header h1{
-margin-top: 10px;
-float: left;
-padding-left: 10px;
-font-family: "Courier New", Garamond,Serif ;
-font-size: 33px;
-color: rgb(231, 177, 59);
-}
-.Header h2{
-position: inherit;
-padding-left: 70px;
-margin-top: 35px;
-color: white;
-font-family: cursive,Serif, Garamond, "Courier New";
-}
-.Header h3{
-padding-left: 570px ;
-margin-top: 35px;
-
-color: white;
-font-family: cursive,Serif, Garamond, "Courier New";
+.Header h1 {
+	margin-top: 10px;
+	float: left;
+	padding-left: 10px;
+	font-family: "Courier New", Garamond, Serif;
+	font-size: 33px;
+	color: rgb(231, 177, 59);
 }
 
-.logo{
+.Header h2 {
+	position: inherit;
+	padding-left: 70px;
+	margin-top: 35px;
+	color: white;
+	font-family: cursive, Serif, Garamond, "Courier New";
+}
+
+.Header h3 {
+	padding-left: 570px;
+	margin-top: 35px;
+
+	color: white;
+	font-family: cursive, Serif, Garamond, "Courier New";
+}
+
+.logo {
 	margin-top: 15px;
 	margin-left: 20px;
 	float: left;
-color: rgb(133, 114, 7);
-box-shadow: 3px 0px 0px rgb(255, 255, 255);
-padding-right: 15px;
+	color: rgb(133, 114, 7);
+	box-shadow: 3px 0px 0px rgb(255, 255, 255);
+	padding-right: 15px;
 	font-size: 45px;
 }
-
-
-
-

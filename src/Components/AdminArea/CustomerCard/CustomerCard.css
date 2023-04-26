@@ -1,4 +1,4 @@
-.CustomerCard  {
+.CustomerCard {
     width: 250px;
     height: 120px;
     display: inline-flex;
@@ -9,10 +9,10 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px;
-    font-family:  Garamond,Serif, "Courier New" ;
+    font-family: Garamond, Serif, "Courier New";
     font-size: larger;
-    }
-    
-    .CustomerCard >div:last-child{
-     margin-left: auto;
-     }
+}
+
+.CustomerCard>div:last-child {
+    margin-left: auto;
+}

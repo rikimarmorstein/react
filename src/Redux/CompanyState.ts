@@ -4,15 +4,16 @@ import Company from "../Models/Company";
 // 1. products state - the data we need at global application level
 export class CompanyState {
     public companies: Company[] = [];
+    
 }
 
 // 2. Action Types - list of actions - enum
 export enum CompanyActionType {
     FetchCompanies = "FetchCompanies",
-    AddCompany="AddCompany",
-    UpdateCompany="UpdateCompany",
-    DeleteCompany="DeleteCompany",
-    Logout="Logout"
+    AddCompany = "AddCompany",
+    UpdateCompany = "UpdateCompany",
+    DeleteCompany = "DeleteCompany",
+    Logout = "Logout"
 }
 
 // 3. Action - an interface describing a single command
@@ -25,9 +26,6 @@ export interface CompaniesAction {
 export function fetchCompanyAction(companies: Company[]): CompaniesAction {
     return { type: CompanyActionType.FetchCompanies, payload: companies };
 }
-// export function fetchOneCompanyAction(company: Company): CompaniesAction {
-//     return { type: CompanyActionType.FetchCompany, payload: company };
-// }
 
 export function addCompanyAction(company: Company): CompaniesAction {
     return { type: CompanyActionType.AddCompany, payload: company };
@@ -63,8 +61,8 @@ export function companyReducer(currentState: CompanyState = new CompanyState(), 
             const indexToDelete = newState.companies.findIndex(c => c.id === action.payload);
             if (indexToDelete >= 0) newState.companies.splice(indexToDelete, 1);
             break;
-            case CompanyActionType.Logout: 
-            newState.companies=[];
+        case CompanyActionType.Logout:
+            newState.companies = [];
             break;
     }
 
