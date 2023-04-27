@@ -49,7 +49,7 @@
 }
 
 .Menu #bag {
-    margin-right: 20px;
+    margin-right: 25px;
     color: white;
     font-size: 30px;
     float: right;
@@ -62,6 +62,8 @@
 .Menu #count {
     font-size: 10px;
     float: right;
+    margin-right: 5px;
+
 }
 
 .Menu #myCoupons:hover {

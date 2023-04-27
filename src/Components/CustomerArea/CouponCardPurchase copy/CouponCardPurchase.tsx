@@ -66,6 +66,7 @@ function CouponCardPurchase(props: CouponCardProps): JSX.Element {
         <div className="CouponCardPurchase">
             <div>
                 <img src={props.coupon.image} alt="" /><br />
+                <h5>{props.coupon.company.name} company</h5>
                 <h3>{props.coupon.category}</h3>
                 <h2>{props.coupon.title}</h2>
                 <h3>{props.coupon.description}</h3><br />

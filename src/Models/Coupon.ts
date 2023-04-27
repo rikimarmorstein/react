@@ -1,8 +1,10 @@
 import Category from "./Category";
+import Company from "./Company";
 
 class Coupon{
 
     public id: number;
+	public company :Company;
 	public category: Category ;
 	public title: string;
 	public description: string;

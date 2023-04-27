@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import ClientType from "../../../Models/ClientType";
 import store from "../../../Redux/Store";
 import { FaHome } from "react-icons/fa";
-import { TbShoppingBag } from "react-icons/tb";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import "./Menu.css";
 
 function Menu(): JSX.Element {
@@ -46,7 +46,7 @@ function Menu(): JSX.Element {
 
                 {clientType === ClientType.CUSTOMER && <>
                     <span id="spanBag">
-                        <NavLink id="myCoupons" to="/customer-coupons" ><TbShoppingBag id="bag" /><span id="count">{count} </span></NavLink>
+                        <NavLink id="myCoupons" to="/customer-coupons" ><MdOutlineShoppingCart id="bag" /><span id="count">{count} </span></NavLink>
                     </span><br />
                     <NavLink to="/customer-home"><FaHome /> Home</NavLink>  <span> | </span>
                     <NavLink to="/about">About</NavLink> <span> | </span>

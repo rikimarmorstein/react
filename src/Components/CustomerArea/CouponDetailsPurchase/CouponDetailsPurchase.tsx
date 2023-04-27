@@ -4,10 +4,12 @@ import { HiShoppingCart } from "react-icons/hi";
 import { RxScissors } from "react-icons/rx"
 import "./CouponDetailsPurchase.css";
 
+
 interface CouponCardProps {
     coupon: Coupon;
 }
 function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
+
 
     function formatDate(date: Date) {
         let dateForm = new Date(date),
@@ -34,6 +36,7 @@ function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
                     <div className="middle">
                         <div className="text"><NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart className="buy" /></NavLink></div>
                     </div></div>
+                <h5>{props.coupon.company.name} company</h5>
                 {props.coupon.category}<br />
                 <hr />
                 {props.coupon.title}

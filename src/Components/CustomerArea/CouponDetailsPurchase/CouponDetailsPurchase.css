@@ -88,3 +88,7 @@ img {
 .CouponDetailsPurchase span {
   font-weight: bold;
 }
+
+.CouponDetailsPurchase h5{
+  text-align: left !important;
+}
