@@ -190,3 +190,12 @@
 .Home #name:focus {
 	background-color:rgb(189, 163, 18);
 }
+
+.Home p{
+	border: 1px solid red;
+	text-align: center;
+	color: white;
+	background-color: red;
+	margin-left: 10px;
+	margin-right: 10px;
+}

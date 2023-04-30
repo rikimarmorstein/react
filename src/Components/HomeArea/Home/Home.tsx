@@ -98,7 +98,18 @@ function Home(): JSX.Element {
             <form ><ImSearch />
                 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}
                     value={selectedName} />
-            </form>  <br />
+            </form>
+            <p>Login details: &nbsp;  &nbsp;  &nbsp;
+                ADMIN&nbsp;
+                email: admin@admin.com,
+                password: admin  &nbsp; | &nbsp;
+                COMPANY&nbsp;
+                email: chef@gmail.com,
+                password: 1234  &nbsp; | &nbsp;
+                CUSTOMER&nbsp;
+                email: riki@gmail.com,
+                password: 1234
+            </p>
             {coupons.length === 0 && <h2>No coupons found 🙁</h2>}
             {coupons.map((c) => (
                 <CouponDetailsPurchase key={c.id} coupon={c} />

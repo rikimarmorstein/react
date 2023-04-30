@@ -36,7 +36,7 @@ function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
                     <div className="middle">
                         <div className="text"><NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart className="buy" /></NavLink></div>
                     </div></div>
-                <h5>{props.coupon.company.name} company</h5>
+                <div className="company">"{props.coupon.company.name} "</div>
                 {props.coupon.category}<br />
                 <hr />
                 {props.coupon.title}

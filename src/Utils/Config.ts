@@ -18,6 +18,6 @@ class ProductionConfig {
     public allCoupons = "http://localhost:8080/allCoupons";
 }
 
-const appConfig = process.env.NODE_ENV === "development"
+const appConfig = process.env.NODE_ENV == "development"
     ? new DevelopmentConfig() : new ProductionConfig();
 export default appConfig;
