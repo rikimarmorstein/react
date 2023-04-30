@@ -2,7 +2,7 @@
   height: 100%;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 20% 75% 5%;
+  grid-template-rows: 18% 77% 5%;
   align-items: stretch;
   justify-items: stretch;
 }
