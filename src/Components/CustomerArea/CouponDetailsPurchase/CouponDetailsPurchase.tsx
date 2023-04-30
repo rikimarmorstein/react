@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import Coupon from "../../../Models/Coupon";
 import { HiShoppingCart } from "react-icons/hi";
 import { RxScissors } from "react-icons/rx"
+import { BsShopWindow } from "react-icons/bs"
 import "./CouponDetailsPurchase.css";
 
 
@@ -36,7 +37,7 @@ function CouponDetailsPurchase(props: CouponCardProps): JSX.Element {
                     <div className="middle">
                         <div className="text"><NavLink to={"/customer/purchase/" + props.coupon.id} title="Buy"> <HiShoppingCart className="buy" /></NavLink></div>
                     </div></div>
-                <div className="company">"{props.coupon.company.name} "</div>
+                <div className="company"><BsShopWindow/> {props.coupon.company.name} </div>
                 {props.coupon.category}<br />
                 <hr />
                 {props.coupon.title}

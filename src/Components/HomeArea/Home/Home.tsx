@@ -110,7 +110,8 @@ function Home(): JSX.Element {
                 CUSTOMER&nbsp;
                 email: riki@gmail.com,
                 password: 1234
-            </p>{store.getState().couponsState.coupons.length===0 && <Loading/>}
+            </p>
+            {store.getState().couponsState.coupons.length===0 && <Loading/>}
             {coupons.length === 0 && <h2>No coupons found 🙁</h2>}
             {coupons.map((c) => (
                 <CouponDetailsPurchase key={c.id} coupon={c} />

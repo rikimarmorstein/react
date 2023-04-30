@@ -3,6 +3,7 @@ import Company from "../../../Models/Company";
 import companyService from "../../../Services/CompanyService";
 import notificationService from "../../../Services/NotificationService";
 import "./GetCompanyDetails.css";
+import Loading from "../../SharedArea/Loading/Loading";
 
 
 function GetCompanyDetails(): JSX.Element {
@@ -24,13 +25,13 @@ function GetCompanyDetails(): JSX.Element {
 
     return (
         <div className="GetCompanyDetails">
-            {company &&
+            {company ? 
                 <div>
                     <h3>Name: {company.name}</h3>
                     <hr />
                     <h4>Email: {company.email}</h4>
                     <h4>Password: {company.password}</h4>
-                </div>
+                </div> : <Loading/>
             }
 
         </div>
