@@ -12,11 +12,12 @@ import store from "../../../Redux/Store";
 import { Button, FormControlLabel, Paper, Slide, Switch, TextField, Theme, createStyles, makeStyles } from "@mui/material";
 import Category from "../../../Models/Category";
 import "./Home.css";
+import Loading from "../../SharedArea/Loading/Loading";
 
 function Home(): JSX.Element {
 
 
-    const [coupons, setCoupons] = useState<Coupon[]>(store.getState().couponsState.myCoupons);
+    const [coupons, setCoupons] = useState<Coupon[]>(store.getState().couponsState.coupons);
     const [selectedPrice, setSelectedPrice] = useState<number>(0);
     const [selectedName, setSelectedName] = useState<string>("");
 
@@ -109,7 +110,7 @@ function Home(): JSX.Element {
                 CUSTOMER&nbsp;
                 email: riki@gmail.com,
                 password: 1234
-            </p>
+            </p>{store.getState().couponsState.coupons.length===0 && <Loading/>}
             {coupons.length === 0 && <h2>No coupons found 🙁</h2>}
             {coupons.map((c) => (
                 <CouponDetailsPurchase key={c.id} coupon={c} />
