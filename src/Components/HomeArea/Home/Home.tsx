@@ -100,7 +100,7 @@ function Home(): JSX.Element {
                 <input type="text" name="name" id="name" placeholder="Enter coupon title for search" onChange={handleNameChange}
                     value={selectedName} />
             </form>
-            <p>Login details: &nbsp;  &nbsp;  &nbsp;
+            <p>Example login details: &nbsp;  &nbsp;  &nbsp;
                 ADMIN&nbsp;
                 email: admin@admin.com,
                 password: admin  &nbsp; | &nbsp;

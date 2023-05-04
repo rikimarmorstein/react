@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Company from "../../../Models/Company";
 import companyService from "../../../Services/CompanyService";
 import notificationService from "../../../Services/NotificationService";
-import "./GetCompanyDetails.css";
 import Loading from "../../SharedArea/Loading/Loading";
+import "./GetCompanyDetails.css";
 
 
 function GetCompanyDetails(): JSX.Element {
@@ -25,6 +25,7 @@ function GetCompanyDetails(): JSX.Element {
 
     return (
         <div className="GetCompanyDetails">
+      {company== undefined && <Loading/>}  
             {company ? 
                 <div>
                     <h3>Name: {company.name}</h3>
