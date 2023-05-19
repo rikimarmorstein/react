@@ -30,8 +30,8 @@ function Login(): JSX.Element {
       }
       if (credentials.clientType === "COMPANY") {
         navigate("/company-home");
-
-      } if (credentials.clientType === "CUSTOMER") {
+      }
+       if (credentials.clientType === "CUSTOMER") {
         navigate("/customer-home");
       }
     })
