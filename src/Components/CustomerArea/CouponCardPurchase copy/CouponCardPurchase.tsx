@@ -75,7 +75,7 @@ function CouponCardPurchase(props: CouponCardProps): JSX.Element {
                 {props.coupon.price} NIS<br />
             </div>
             <div className="purchase">
-
+//j
                 {store.getState().authState.token != undefined &&
                     store.getState().couponsState.myCoupons.findIndex((coupon) => coupon.id === props.coupon.id) >= 0 ?
                     <button disabled={true} onClick={purchase}> <HiShoppingCart /></button>
