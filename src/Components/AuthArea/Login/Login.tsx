@@ -49,7 +49,7 @@ function Login(): JSX.Element {
 
       navigate("/login")
 
-    }, 1_800_000) // 30:00 minutes - 1800000
+    }, 1_800_000) //  30:00 minutes - 1800000
 
   }
 
